@@ -9,12 +9,12 @@
       content="width=device-width, initial-scale=1.0">
 
 <meta name="theme-color"
-      content="#111111">
+      content="#0878d1">
 
 <meta name="description"
-      content="STAND HC Donation">
+      content="Dana Sumbangan STAND HC">
 
-<title>STAND HC | Donation</title>
+<title>Dana Sumbangan STAND HC</title>
 
 
 <style>
@@ -34,9 +34,20 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #f3f4f6;
-  color: #171717;
-  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef4fa 0%,
+      #f8fafc 100%
+    );
+
+  color: #172033;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 
@@ -45,57 +56,93 @@ body {
    ===================================================== */
 
 .header {
-  background: linear-gradient(
-    135deg,
-    #050505,
-    #252525
-  );
+
+  background:
+    linear-gradient(
+      135deg,
+      #0066cc,
+      #0789df
+    );
 
   color: white;
 
   text-align: center;
 
-  padding: 30px 15px;
+  padding:
+    26px 15px 28px;
+
+  border-radius:
+    0 0 22px 22px;
 
   box-shadow:
-    0 5px 20px rgba(0,0,0,.18);
+    0 5px 18px
+    rgba(0,0,0,.12);
 }
 
-.ball {
-  font-size: 52px;
-  line-height: 1;
-  margin-bottom: 10px;
-}
 
-.brand {
-  font-size: 32px;
+.logo {
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #0878d1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: auto;
+
+  font-size: 20px;
+
   font-weight: 900;
-  letter-spacing: 3px;
+
 }
 
-.club {
-  margin-top: 7px;
-  font-size: 13px;
-  opacity: .85;
+
+.title {
+
+  font-size: 27px;
+
+  font-weight: 900;
+
+  margin-top: 12px;
+
 }
+
 
 .subtitle {
-  margin-top: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
+
+  font-size: 13px;
+
+  margin-top: 7px;
+
+  opacity: .9;
+
 }
 
 
 /* =====================================================
-   MAIN
+   CONTAINER
    ===================================================== */
 
 .container {
+
   width: 100%;
+
   max-width: 650px;
+
   margin: auto;
-  padding: 18px 15px 30px;
+
+  padding:
+    15px 12px 30px;
+
 }
 
 
@@ -104,77 +151,84 @@ body {
    ===================================================== */
 
 .card {
+
   background: white;
-  border-radius: 20px;
-  padding: 22px;
-  margin-bottom: 18px;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  margin-bottom: 15px;
 
   box-shadow:
-    0 7px 25px rgba(0,0,0,.07);
+    0 4px 18px
+    rgba(0,0,0,.07);
+
 }
 
 
 /* =====================================================
-   TOTAL
+   SUMMARY
    ===================================================== */
 
-.total-title {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  font-weight: bold;
-}
+.summary {
 
-.total {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 900;
-  margin: 5px 0;
-}
-
-.total-label {
-  text-align: center;
-  color: #777;
-  font-size: 13px;
-}
-
-
-/* =====================================================
-   STATS
-   ===================================================== */
-
-.stats {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+
+  gap: 10px;
+
 }
 
-.stat {
+
+.summary-box {
+
   flex: 1;
-  background: #f6f7f8;
-  border-radius: 15px;
-  padding: 15px;
+
+  background:
+    #f0f7fd;
+
+  border-radius: 14px;
+
+  padding:
+    15px 8px;
+
   text-align: center;
+
 }
 
-.stat-label {
-  font-size: 11px;
-  color: #777;
-  font-weight: bold;
-}
 
-.stat-value {
-  display: block;
-  margin-top: 5px;
-  font-size: 24px;
-  font-weight: 900;
-}
+.summary-label {
 
-.data-status {
-  text-align: center;
-  margin-top: 12px;
   font-size: 12px;
-  color: #888;
+
+  color: #596579;
+
+}
+
+
+.summary-value {
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+  color: #0068b7;
+
+  margin-top: 5px;
+
+}
+
+
+.status {
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #8a94a3;
+
+  margin-top: 10px;
+
 }
 
 
@@ -183,55 +237,88 @@ body {
    ===================================================== */
 
 .section-title {
-  text-align: center;
+
   font-size: 20px;
+
   font-weight: 800;
-  margin: 0 0 18px;
+
+  margin:
+    0 0 15px;
+
 }
 
 
 /* =====================================================
-   QR
+   QR CODE
    ===================================================== */
 
-.qr-wrapper {
-  text-align: center;
-}
+/*
+   PENTING:
+
+   QR TIDAK DIJANA DENGAN JAVASCRIPT.
+
+   Gambar QR Affin asal mesti dinamakan:
+
+   qr-code.jpg
+
+   dan diletakkan dalam repository
+   yang sama dengan index.html.
+*/
 
 .qr {
+
   display: block;
 
   width: 100%;
-  max-width: 350px;
 
-  margin: 10px auto 15px;
+  max-width: 390px;
 
-  border-radius: 14px;
+  height: auto;
 
-  box-shadow:
-    0 4px 15px rgba(0,0,0,.08);
+  margin:
+    0 auto 15px;
+
+  border-radius: 10px;
+
 }
+
 
 .recipient {
+
   text-align: center;
+
   font-size: 15px;
-  font-weight: bold;
+
+  font-weight: 800;
+
   line-height: 1.5;
+
 }
+
 
 .bank {
+
   text-align: center;
+
   color: #666;
-  font-size: 14px;
-  margin-top: 3px;
+
+  font-size: 13px;
+
 }
 
-.qr-note {
+
+.qr-help {
+
   text-align: center;
-  color: #666;
+
+  color: #707b8b;
+
   font-size: 13px;
-  line-height: 1.6;
-  margin-top: 15px;
+
+  line-height: 1.5;
+
+  margin-top: 8px;
+
 }
 
 
@@ -240,22 +327,31 @@ body {
    ===================================================== */
 
 .notice {
-  background: #f7f7f8;
-  border-radius: 13px;
 
-  padding: 15px;
-  margin-top: 16px;
+  margin-top: 15px;
 
-  font-size: 13px;
-  line-height: 1.7;
+  padding: 13px;
 
-  color: #555;
+  border-radius: 12px;
+
+  background:
+    #fff8df;
+
+  color:
+    #69551d;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
 }
 
-.notice-title {
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 5px;
+
+.notice strong {
+
+  color:
+    #51400e;
+
 }
 
 
@@ -264,90 +360,127 @@ body {
    ===================================================== */
 
 .form-title {
+
   font-size: 20px;
+
   font-weight: 800;
-  margin-bottom: 6px;
+
+  margin-bottom: 5px;
+
 }
+
 
 .form-description {
+
+  color: #707b8b;
+
   font-size: 13px;
-  color: #777;
+
   line-height: 1.5;
+
   margin-bottom: 15px;
+
 }
+
 
 label {
+
   display: block;
+
+  margin:
+    15px 0 7px;
+
   font-size: 14px;
-  font-weight: bold;
-  margin: 16px 0 7px;
+
+  font-weight: 700;
+
 }
+
 
 .optional {
+
   color: #999;
+
+  font-size: 11px;
+
   font-weight: normal;
-  font-size: 12px;
+
 }
 
+
 input {
+
   width: 100%;
 
-  padding: 14px;
+  height: 48px;
+
+  padding:
+    0 13px;
 
   border:
-    1px solid #dddddd;
+    1px solid #d8dee7;
 
-  border-radius: 11px;
+  border-radius: 10px;
+
+  background: white;
 
   font-size: 16px;
 
   outline: none;
 
-  background: white;
 }
 
+
 input:focus {
-  border-color: #111;
+
+  border-color:
+    #0878d1;
 
   box-shadow:
     0 0 0 3px
-    rgba(0,0,0,.07);
+    rgba(8,120,209,.10);
+
 }
 
 
 /* =====================================================
-   BUTTON
+   SUBMIT BUTTON
    ===================================================== */
 
 .submit-button {
+
   width: 100%;
 
-  border: none;
+  height: 50px;
 
-  border-radius: 13px;
+  margin-top: 20px;
 
-  padding: 16px;
+  border: 0;
 
-  margin-top: 22px;
+  border-radius: 11px;
 
   background:
     linear-gradient(
       135deg,
-      #111111,
-      #292929
+      #0068bd,
+      #0789df
     );
 
   color: white;
 
-  font-size: 16px;
+  font-size: 15px;
 
   font-weight: 900;
 
   cursor: pointer;
+
 }
 
+
 .submit-button:disabled {
+
   opacity: .55;
+
 }
 
 
@@ -356,42 +489,17 @@ input:focus {
    ===================================================== */
 
 .loading {
+
   display: none;
 
   text-align: center;
 
-  color: #777;
+  padding-top: 12px;
 
-  font-size: 13px;
+  color: #687386;
 
-  padding-top: 13px;
-}
+  font-size: 12px;
 
-.spinner {
-  display: inline-block;
-
-  width: 16px;
-  height: 16px;
-
-  border:
-    2px solid #ddd;
-
-  border-top-color: #111;
-
-  border-radius: 50%;
-
-  vertical-align: middle;
-
-  margin-right: 5px;
-
-  animation:
-    spin .8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 
@@ -400,24 +508,28 @@ input:focus {
    ===================================================== */
 
 .error {
+
   display: none;
 
-  background: #fff0f0;
-
-  color: #b00020;
-
-  border:
-    1px solid #ffd0d0;
+  margin-top: 12px;
 
   padding: 12px;
 
+  background:
+    #fff0f0;
+
+  border:
+    1px solid #ffd1d1;
+
   border-radius: 10px;
 
-  margin-top: 13px;
+  color:
+    #b00020;
 
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 1.5;
+
 }
 
 
@@ -425,52 +537,73 @@ input:focus {
    THANK YOU
    ===================================================== */
 
-.thanks {
+.thank-you {
+
   display: none;
+
   text-align: center;
+
 }
 
-.thanks-icon {
-  font-size: 60px;
-  line-height: 1;
+
+.thank-icon {
+
+  font-size: 55px;
+
 }
 
-.thanks h2 {
-  font-size: 26px;
-  margin: 12px 0;
+
+.thank-you h2 {
+
+  font-size: 25px;
+
+  margin:
+    10px 0;
+
 }
 
-.thanks-message {
-  font-size: 15px;
+
+.thank-message {
+
+  font-size: 14px;
+
   line-height: 1.6;
+
 }
 
-.thanks-sub {
-  color: #777;
-  font-size: 13px;
+
+.thank-note {
+
+  margin-top: 12px;
+
+  color: #737e8f;
+
+  font-size: 12px;
+
   line-height: 1.6;
+
 }
+
 
 .new-button {
+
   width: 100%;
 
-  border: none;
-
-  border-radius: 12px;
-
-  padding: 14px;
+  height: 46px;
 
   margin-top: 18px;
 
-  background: #111;
+  border: 0;
+
+  border-radius: 10px;
+
+  background:
+    #172033;
 
   color: white;
 
-  font-size: 15px;
-
   font-weight: 800;
 
-  cursor: pointer;
 }
 
 
@@ -479,16 +612,18 @@ input:focus {
    ===================================================== */
 
 .footer {
+
   text-align: center;
 
-  color: #888;
+  color: #8a94a3;
 
-  font-size: 12px;
+  font-size: 11px;
 
   line-height: 1.6;
 
   padding:
-    5px 18px 28px;
+    5px 15px 25px;
+
 }
 
 
@@ -496,26 +631,26 @@ input:focus {
    MOBILE
    ===================================================== */
 
-@media (max-width: 450px) {
+@media (
+  max-width: 430px
+) {
 
-  .brand {
-    font-size: 28px;
+  .title {
+
+    font-size: 24px;
+
   }
 
-  .total {
-    font-size: 34px;
+  .summary-value {
+
+    font-size: 20px;
+
   }
 
   .card {
-    padding: 18px;
-  }
 
-  .stats {
-    gap: 8px;
-  }
+    padding: 16px;
 
-  .stat {
-    padding: 13px 7px;
   }
 
 }
@@ -534,21 +669,27 @@ input:focus {
 
 <header class="header">
 
-  <div class="ball">
-    🏐
+
+  <div class="logo">
+
+    SHC
+
   </div>
 
-  <div class="brand">
-    STAND HC
+
+  <div class="title">
+
+    DANA SUMBANGAN STAND HC
+
   </div>
 
-  <div class="club">
-    PASIR GUDANG STAND HANDBALL CLUB
-  </div>
 
   <div class="subtitle">
-    TABUNG SUMBANGAN
+
+    Sokongan untuk perjuangan STAND HC
+
   </div>
+
 
 </header>
 
@@ -558,65 +699,52 @@ input:focus {
 
 
 <!-- =====================================================
-     JUMLAH SUMBANGAN
+     SUMMARY
      ===================================================== -->
 
 <section class="card">
 
-  <div class="total-title">
-    JUMLAH SUMBANGAN TERKUMPUL
-  </div>
+
+  <div class="summary">
 
 
-  <div
-    id="total"
-    class="total">
+    <div class="summary-box">
 
-    RM 0.00
+      <div class="summary-label">
 
-  </div>
+        Dana Disahkan
 
-
-  <div class="total-label">
-
-    Sumbangan yang telah disahkan
-
-  </div>
-
-
-  <div class="stats">
-
-
-    <div class="stat">
-
-      <div class="stat-label">
-        PENYUMBANG
       </div>
 
-      <span
+
+      <div
+        id="total"
+        class="summary-value">
+
+        RM 0.00
+
+      </div>
+
+    </div>
+
+
+
+    <div class="summary-box">
+
+      <div class="summary-label">
+
+        Penyumbang
+
+      </div>
+
+
+      <div
         id="donors"
-        class="stat-value">
+        class="summary-value">
 
         0
 
-      </span>
-
-    </div>
-
-
-    <div class="stat">
-
-      <div class="stat-label">
-        STATUS
       </div>
-
-      <span
-        class="stat-value"
-        style="font-size:18px;">
-
-        AKTIF
-
-      </span>
 
     </div>
 
@@ -625,19 +753,20 @@ input:focus {
 
 
   <div
-    id="dataStatus"
-    class="data-status">
+    id="status"
+    class="status">
 
     Mengemaskini data...
 
   </div>
+
 
 </section>
 
 
 
 <!-- =====================================================
-     QR CODE
+     QR AFFIN
      ===================================================== -->
 
 <section class="card">
@@ -645,24 +774,32 @@ input:focus {
 
   <h2 class="section-title">
 
-    📱 SCAN UNTUK MENYUMBANG
+    Sumbangan melalui QR
 
   </h2>
 
 
   <!--
-    PENTING:
+  ======================================================
+  PENTING
 
-    Upload QR ke GitHub dengan nama:
+  INI BUKAN QR GENERATOR.
 
-    qr-code.jpg
+  GitHub hanya memaparkan GAMBAR QR ASAL.
 
+  Nama fail mesti:
+
+  qr-code.jpg
+
+  Jangan ubah nama fail tersebut.
+  ======================================================
   -->
+
 
   <img
     src="qr-code.jpg"
     class="qr"
-    alt="QR Code STAND HC">
+    alt="QR Pembayaran Affin">
 
 
   <div class="recipient">
@@ -679,32 +816,30 @@ input:focus {
   </div>
 
 
-  <div class="qr-note">
+  <div class="qr-help">
 
-    Scan QR Code di atas menggunakan
-    aplikasi perbankan anda untuk
-    membuat sumbangan.
+    Sila buat bayaran melalui QR di atas
+    sebelum menghantar borang.
 
   </div>
 
 
   <div class="notice">
 
-    <div class="notice-title">
-      📌 Cara menyumbang
-    </div>
+    <strong>Nota:</strong><br>
 
-    1. Scan QR Code di atas.<br>
+    Gunakan QR Affin asal di atas.
+    Jangan generate semula QR menggunakan
+    nama atau teks.
 
-    2. Buat pembayaran.<br>
+    <br><br>
 
-    3. Simpan reference transaksi.<br>
-
-    4. Isi maklumat sumbangan di bawah.<br>
-
-    5. Tekan HANTAR SUMBANGAN.
+    Setiap sumbangan akan direkodkan
+    dan disahkan oleh admin selepas
+    semakan transaksi.
 
   </div>
+
 
 </section>
 
@@ -721,25 +856,27 @@ input:focus {
 
   <div class="form-title">
 
-    ❤️ Maklumat Sumbangan
+    Rekod Sumbangan
 
   </div>
 
 
   <div class="form-description">
 
-    Selepas membuat pembayaran,
+    Selepas membuat bayaran,
     sila isi maklumat di bawah.
 
   </div>
 
 
-  <form id="donationForm">
+  <form
+    id="donationForm">
 
 
     <!-- NAMA -->
 
-    <label for="name">
+    <label
+      for="name">
 
       Nama
 
@@ -748,18 +885,41 @@ input:focus {
 
     <input
       id="name"
-      name="name"
       type="text"
       maxlength="100"
-      autocomplete="name"
-      placeholder="Masukkan nama"
+      placeholder="Nama penyumbang"
       required>
+
+
+
+    <!-- TELEFON -->
+
+    <label
+      for="phone">
+
+      No. Telefon
+
+      <span class="optional">
+
+        (Pilihan)
+
+      </span>
+
+    </label>
+
+
+    <input
+      id="phone"
+      type="tel"
+      maxlength="30"
+      placeholder="Contoh: 0123456789">
 
 
 
     <!-- JUMLAH -->
 
-    <label for="amount">
+    <label
+      for="amount">
 
       Jumlah Sumbangan (RM)
 
@@ -768,48 +928,26 @@ input:focus {
 
     <input
       id="amount"
-      name="amount"
       type="number"
       min="1"
       max="1000000"
       step="0.01"
-      inputmode="decimal"
       placeholder="Contoh: 50"
       required>
 
 
 
-    <!-- TELEFON -->
-
-    <label for="phone">
-
-      No. Telefon
-
-      <span class="optional">
-        (Pilihan)
-      </span>
-
-    </label>
-
-
-    <input
-      id="phone"
-      name="phone"
-      type="tel"
-      maxlength="30"
-      autocomplete="tel"
-      placeholder="Contoh: 0123456789">
-
-
-
     <!-- REFERENCE -->
 
-    <label for="reference">
+    <label
+      for="reference">
 
-      Reference / No. Transaksi
+      Rujukan Transaksi
 
       <span class="optional">
+
         (Pilihan)
+
       </span>
 
     </label>
@@ -817,14 +955,13 @@ input:focus {
 
     <input
       id="reference"
-      name="reference"
       type="text"
       maxlength="100"
-      placeholder="Contoh: AF123456">
+      placeholder="Contoh: FPX / DuitNow / rujukan bank">
 
 
 
-    <!-- SUBMIT -->
+    <!-- BUTTON -->
 
     <button
       id="submitButton"
@@ -839,20 +976,14 @@ input:focus {
   </form>
 
 
-  <!-- LOADING -->
-
   <div
     id="loading"
     class="loading">
-
-    <span class="spinner"></span>
 
     Sedang menghantar maklumat...
 
   </div>
 
-
-  <!-- ERROR -->
 
   <div
     id="error"
@@ -866,15 +997,15 @@ input:focus {
 
 
 <!-- =====================================================
-     TERIMA KASIH
+     THANK YOU
      ===================================================== -->
 
 <section
-  id="thanks"
-  class="card thanks">
+  id="thankYou"
+  class="card thank-you">
 
 
-  <div class="thanks-icon">
+  <div class="thank-icon">
 
     🙏
 
@@ -889,16 +1020,16 @@ input:focus {
 
 
   <div
-    id="thanksMessage"
-    class="thanks-message">
+    id="thankMessage"
+    class="thank-message">
 
-    Terima kasih atas sumbangan anda
-    kepada STAND HC.
+    Terima kasih atas sumbangan
+    anda kepada STAND HC.
 
   </div>
 
 
-  <div class="thanks-sub">
+  <div class="thank-note">
 
     Sumbangan anda telah direkodkan
     untuk semakan pihak STAND HC.
@@ -916,7 +1047,7 @@ input:focus {
     type="button"
     onclick="newDonation()">
 
-    ❤️ BUAT SUMBANGAN LAIN
+    BUAT SUMBANGAN LAIN
 
   </button>
 
@@ -935,7 +1066,9 @@ input:focus {
 <footer class="footer">
 
   <strong>
+
     STAND HC © 2026
+
   </strong>
 
   <br>
@@ -951,15 +1084,9 @@ input:focus {
 
 /**********************************************************
  *
- * GOOGLE APPS SCRIPT URL
+ * GOOGLE APPS SCRIPT WEB APP URL
  *
- * PENTING:
- *
- * GANTIKAN:
- *
- * YOUR_APPS_SCRIPT_WEB_APP_URL
- *
- * DENGAN URL SEBENAR APPS SCRIPT ANDA.
+ * GANTIKAN NILAI DI BAWAH DENGAN URL /exec ANDA.
  *
  **********************************************************/
 
@@ -974,13 +1101,13 @@ const API_URL =
 
 function formatRM(value) {
 
-  const number =
-    Number(value) || 0;
-
-  return number.toLocaleString(
+  return Number(
+    value || 0
+  ).toLocaleString(
     "ms-MY",
     {
       minimumFractionDigits: 2,
+
       maximumFractionDigits: 2
     }
   );
@@ -990,7 +1117,7 @@ function formatRM(value) {
 
 
 /**********************************************************
- * ERROR
+ * SHOW ERROR
  **********************************************************/
 
 function showError(message) {
@@ -1000,14 +1127,20 @@ function showError(message) {
       "error"
     );
 
+
   box.textContent =
     message;
+
 
   box.style.display =
     "block";
 
 }
 
+
+/**********************************************************
+ * HIDE ERROR
+ **********************************************************/
 
 function hideError() {
 
@@ -1016,8 +1149,10 @@ function hideError() {
       "error"
     );
 
+
   box.textContent =
     "";
+
 
   box.style.display =
     "none";
@@ -1027,14 +1162,15 @@ function hideError() {
 
 
 /**********************************************************
- * LOAD JUMLAH SUMBANGAN
- *
- * Menggunakan JSONP supaya GitHub Pages
- * boleh membaca data daripada Apps Script.
+ * LOAD SUMMARY
  **********************************************************/
 
 function loadSummary() {
 
+
+  /*
+   * URL BELUM DIMASUKKAN
+   */
 
   if (
     !API_URL ||
@@ -1045,7 +1181,7 @@ function loadSummary() {
 
     document
       .getElementById(
-        "dataStatus"
+        "status"
       )
       .textContent =
       "URL Apps Script belum dimasukkan.";
@@ -1054,6 +1190,10 @@ function loadSummary() {
 
   }
 
+
+  /*
+   * JSONP
+   */
 
   const callbackName =
     "standHC_" +
@@ -1072,6 +1212,10 @@ function loadSummary() {
     "&callback=" +
     callbackName;
 
+
+  /*
+   * RESPONSE
+   */
 
   window[callbackName] =
     function(data) {
@@ -1106,7 +1250,7 @@ function loadSummary() {
 
         document
           .getElementById(
-            "dataStatus"
+            "status"
           )
           .textContent =
           "✓ Data dikemaskini";
@@ -1119,22 +1263,29 @@ function loadSummary() {
     };
 
 
+  /*
+   * ERROR
+   */
+
   script.onerror =
     function() {
 
 
       document
         .getElementById(
-          "dataStatus"
+          "status"
         )
         .textContent =
-        "Data belum dapat dipaparkan.";
-
+        "Tidak dapat mendapatkan data.";
 
       cleanup();
 
     };
 
+
+  /*
+   * CLEANUP
+   */
 
   function cleanup() {
 
@@ -1145,8 +1296,9 @@ function loadSummary() {
           callbackName
         ];
 
-    } catch (e) {}
+    }
 
+    catch (error) {}
 
     if (
       script.parentNode
@@ -1172,7 +1324,7 @@ function loadSummary() {
 
 
 /**********************************************************
- * SUBMIT SUMBANGAN
+ * SUBMIT DONATION
  **********************************************************/
 
 document
@@ -1188,7 +1340,7 @@ document
 
 
       /*
-       * CHECK URL
+       * CHECK API
        */
 
       if (
@@ -1208,13 +1360,22 @@ document
 
 
       /*
-       * AMBIL DATA
+       * DATA
        */
 
       const name =
         document
           .getElementById(
             "name"
+          )
+          .value
+          .trim();
+
+
+      const phone =
+        document
+          .getElementById(
+            "phone"
           )
           .value
           .trim();
@@ -1230,15 +1391,6 @@ document
         );
 
 
-      const phone =
-        document
-          .getElementById(
-            "phone"
-          )
-          .value
-          .trim();
-
-
       const reference =
         document
           .getElementById(
@@ -1249,7 +1401,7 @@ document
 
 
       /*
-       * VALIDATE
+       * VALIDATION
        */
 
       if (!name) {
@@ -1331,14 +1483,14 @@ document
 
 
       formData.append(
-        "amount",
-        amount.toFixed(2)
+        "phone",
+        phone
       );
 
 
       formData.append(
-        "phone",
-        phone
+        "amount",
+        amount.toFixed(2)
       );
 
 
@@ -1355,11 +1507,14 @@ document
       fetch(
         API_URL,
         {
-          method: "POST",
+          method:
+            "POST",
 
-          body: formData,
+          body:
+            formData,
 
-          mode: "no-cors"
+          mode:
+            "no-cors"
         }
       )
 
@@ -1368,13 +1523,13 @@ document
         function() {
 
 
-          /*
-           * Paparkan terima kasih
-           */
-
           setTimeout(
             function() {
 
+
+              /*
+               * HIDE FORM
+               */
 
               document
                 .getElementById(
@@ -1384,19 +1539,28 @@ document
                 "none";
 
 
+              /*
+               * SHOW THANK YOU
+               */
+
               document
                 .getElementById(
-                  "thanks"
+                  "thankYou"
                 )
                 .style.display =
                 "block";
 
 
+              /*
+               * MESSAGE
+               */
+
               document
                 .getElementById(
-                  "thanksMessage"
+                  "thankMessage"
                 )
                 .textContent =
+
                 "Terima kasih " +
                 name +
                 " atas sumbangan RM " +
@@ -1407,7 +1571,7 @@ document
 
 
               /*
-               * Reset
+               * RESET
                */
 
               document
@@ -1430,7 +1594,7 @@ document
 
 
               /*
-               * Refresh jumlah
+               * REFRESH DATA
                */
 
               loadSummary();
@@ -1466,7 +1630,7 @@ document
 
 
           showError(
-            "Gagal menghantar maklumat. Sila cuba semula."
+            "Gagal menghantar data. Sila cuba lagi."
           );
 
         }
@@ -1478,7 +1642,7 @@ document
 
 
 /**********************************************************
- * SUMBANGAN BAHARU
+ * NEW DONATION
  **********************************************************/
 
 function newDonation() {
@@ -1486,7 +1650,7 @@ function newDonation() {
 
   document
     .getElementById(
-      "thanks"
+      "thankYou"
     )
     .style.display =
     "none";
@@ -1515,7 +1679,8 @@ function newDonation() {
       "formCard"
     )
     .scrollIntoView({
-      behavior: "smooth"
+      behavior:
+        "smooth"
     });
 
 }
