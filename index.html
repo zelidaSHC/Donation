@@ -1,2225 +1,504 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<meta name="theme-color"
-      content="#0878d1">
-
-<meta name="description"
-      content="Dana Sumbangan STAND HC">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0878d1">
 <title>Dana Sumbangan STAND HC</title>
 
-
 <style>
-
-* {
-  box-sizing: border-box;
-}
-
-
-body {
-  margin: 0;
-  background: #eef3f8;
-  color: #172033;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.header {
-  background:
-    linear-gradient(
-      135deg,
-      #0066cc,
-      #0789df
-    );
-
-  color: #fff;
-
-  text-align: center;
-
-  padding:
-    24px 14px 27px;
-
-  border-radius:
-    0 0 22px 22px;
-
-  box-shadow:
-    0 5px 18px
-    rgba(0,0,0,.12);
-}
-
-
-.logo {
-  width: 68px;
-  height: 68px;
-
-  border-radius: 50%;
-
-  background: #fff;
-
-  color: #0878d1;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  margin:
-    0 auto 10px;
-
-  font-weight: 900;
-
-  font-size: 19px;
-}
-
-
-.title {
-  font-size: 26px;
-  font-weight: 900;
-}
-
-
-.subtitle {
-  font-size: 13px;
-  margin-top: 7px;
-  opacity: .92;
-}
-
-
-.container {
-  width: 100%;
-  max-width: 680px;
-  margin: auto;
-  padding: 15px 12px 30px;
-}
-
-
-.card {
-  background: #fff;
-
-  border-radius: 18px;
-
-  padding: 18px;
-
-  margin-bottom: 15px;
-
-  box-shadow:
-    0 4px 18px
-    rgba(0,0,0,.07);
-}
-
-
-.summary {
-  display: flex;
-  gap: 10px;
-}
-
-
-.summary-box {
-  flex: 1;
-
-  background: #f0f7fd;
-
-  border-radius: 14px;
-
-  padding: 14px 8px;
-
-  text-align: center;
-}
-
-
-.summary-label {
-  font-size: 12px;
-  color: #596579;
-}
-
-
-.summary-value {
-  font-size: 23px;
-
-  font-weight: 900;
-
-  color: #0068b7;
-
-  margin-top: 5px;
-}
-
-
-.status {
-  text-align: center;
-
-  font-size: 11px;
-
-  color: #8a94a3;
-
-  margin-top: 10px;
-}
-
-
-h2 {
-  font-size: 20px;
-  margin: 0 0 15px;
-}
-
-
-/* =====================================================
-   QR AFFIN ASAL
-   ===================================================== */
-
-.qr {
-
-  display: block;
-
-  width: 100%;
-
-  max-width: 390px;
-
-  height: auto;
-
-  margin:
-    0 auto 14px;
-
-  border-radius: 10px;
-
-  background: #fff;
-
-}
-
-
-.recipient {
-  text-align: center;
-
-  font-size: 15px;
-
-  font-weight: 800;
-
-  line-height: 1.5;
-}
-
-
-.bank {
-  text-align: center;
-
-  color: #666;
-
-  font-size: 13px;
-}
-
-
-.help {
-  text-align: center;
-
-  color: #707b8b;
-
-  font-size: 13px;
-
-  line-height: 1.5;
-
-  margin-top: 8px;
-}
-
-
-.notice {
-
-  margin-top: 15px;
-
-  padding: 13px;
-
-  border-radius: 12px;
-
-  background: #fff8df;
-
-  color: #69551d;
-
-  font-size: 12px;
-
-  line-height: 1.6;
-}
-
-
-/* =====================================================
-   FORM
-   ===================================================== */
-
-label {
-
-  display: block;
-
-  margin:
-    15px 0 7px;
-
-  font-size: 14px;
-
-  font-weight: 700;
-}
-
-
-input,
-textarea {
-
-  width: 100%;
-
-  padding:
-    12px 13px;
-
-  border:
-    1px solid #d8dee7;
-
-  border-radius: 10px;
-
-  background: #fff;
-
-  font-size: 16px;
-
-  outline: none;
-}
-
-
-input {
-  height: 48px;
-}
-
-
-textarea {
-
-  min-height: 80px;
-
-  resize: vertical;
-}
-
-
-input:focus,
-textarea:focus {
-
-  border-color:
-    #0878d1;
-
-  box-shadow:
-    0 0 0 3px
-    rgba(8,120,209,.1);
-}
-
-
-/* =====================================================
-   BUTTON
-   ===================================================== */
-
-button {
-
-  width: 100%;
-
-  height: 48px;
-
-  margin-top: 18px;
-
-  border: 0;
-
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #0068bd,
-      #0789df
-    );
-
-  color: #fff;
-
-  font-size: 15px;
-
-  font-weight: 900;
-
-  cursor: pointer;
-}
-
-
-button:disabled {
-  opacity: .55;
-}
-
-
-/* =====================================================
-   LOADING / ERROR
-   ===================================================== */
-
-.loading {
-
-  display: none;
-
-  text-align: center;
-
-  color: #687386;
-
-  font-size: 12px;
-
-  margin-top: 12px;
-}
-
-
-.error {
-
-  display: none;
-
-  margin-top: 12px;
-
-  padding: 12px;
-
-  background: #fff0f0;
-
-  border:
-    1px solid #ffd1d1;
-
-  border-radius: 10px;
-
-  color: #b00020;
-
-  font-size: 12px;
-
-  line-height: 1.5;
-}
-
-
-/* =====================================================
-   THANK YOU
-   ===================================================== */
-
-.thanks {
-
-  display: none;
-
-  text-align: center;
-}
-
-
-.thanks-icon {
-  font-size: 55px;
-}
-
-
-.thanks h2 {
-  font-size: 25px;
-}
-
-
-.thanks p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-
-.new {
-  background: #172033;
-}
-
-
-/* =====================================================
-   RECENT
-   ===================================================== */
-
-.recent-item {
-
-  padding: 12px 0;
-
-  border-bottom:
-    1px solid #edf0f3;
-}
-
-
-.recent-item:last-child {
-  border-bottom: 0;
-}
-
-
-.recent-name {
-  font-weight: 800;
-}
-
-
-.recent-meta {
-
-  font-size: 12px;
-
-  color: #77808e;
-
-  margin-top: 3px;
-}
-
-
-.recent-amount {
-
-  font-weight: 900;
-
-  color: #0878d1;
-
-  float: right;
-}
-
-
-/* =====================================================
-   ADMIN
-   ===================================================== */
-
-.admin-toggle {
-
-  background: #edf6ff;
-
-  color: #0878d1;
-
-  margin-top: 0;
-}
-
-
-.admin {
-  display: none;
-}
-
-
-.admin-table {
-
-  width: 100%;
-
-  overflow: auto;
-}
-
-
-.admin-row {
-
-  padding: 12px 0;
-
-  border-bottom:
-    1px solid #edf0f3;
-
-  font-size: 12px;
-}
-
-
-.pill {
-
-  display: inline-block;
-
-  padding:
-    5px 8px;
-
-  border-radius: 999px;
-
-  font-weight: 800;
-
-  font-size: 10px;
-}
-
-
-.pending {
-
-  background: #fff5cf;
-
-  color: #745c00;
-}
-
-
-.approved {
-
-  background: #e6f7ec;
-
-  color: #14652c;
-}
-
-
-.rejected {
-
-  background: #ffe8e8;
-
-  color: #9c1c1c;
-}
-
-
-.admin-actions {
-
-  display: flex;
-
-  gap: 7px;
-}
-
-
-.admin-actions button {
-
-  height: 38px;
-
-  margin-top: 8px;
-
-  font-size: 12px;
-}
-
-
-.approve {
-  background: #18864b;
-}
-
-
-.reject {
-  background: #c93636;
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
-.footer {
-
-  text-align: center;
-
-  color: #8a94a3;
-
-  font-size: 11px;
-
-  line-height: 1.6;
-
-  padding:
-    5px 15px 25px;
-}
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media(max-width:430px) {
-
-  .title {
-    font-size: 23px;
-  }
-
-  .summary-value {
-    font-size: 20px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-
-}
-
+*{box-sizing:border-box}
+body{margin:0;background:#f1f5fa;color:#172033;font-family:Arial,sans-serif}
+header{background:linear-gradient(135deg,#075bb5,#0789df);color:white;text-align:center;padding:25px 12px;border-radius:0 0 20px 20px}
+main{max-width:650px;margin:auto;padding:14px}
+.card{background:white;border-radius:16px;padding:17px;margin-bottom:14px;box-shadow:0 3px 14px #0001}
+h1{font-size:24px}h2{font-size:19px;margin:0 0 14px}
+.stats{display:flex;gap:10px}
+.stat{flex:1;text-align:center;background:#eff7ff;border-radius:10px;padding:12px}
+.stat b{display:block;color:#075fae;font-size:22px;margin-top:6px}
+.qr{display:block;width:100%;max-width:350px;margin:auto}
+.center{text-align:center}
+.note{background:#fff6dc;padding:12px;border-radius:10px;font-size:13px;line-height:1.6;margin-top:12px}
+.actions{display:flex;gap:9px;flex-wrap:wrap}
+.linkbtn{flex:1;min-width:130px;text-decoration:none;text-align:center;background:#eaf5ff;color:#075fae;border-radius:10px;padding:12px;font-weight:bold;font-size:14px;display:block}
+label{display:block;font-weight:bold;font-size:14px;margin:14px 0 6px}
+input,textarea,select{width:100%;padding:12px;border:1px solid #d5dce6;border-radius:9px;font-size:16px;background:white}
+textarea{min-height:70px}
+button{width:100%;padding:13px;background:#0867bd;color:white;border:0;border-radius:9px;font-weight:bold;margin-top:14px;cursor:pointer}
+button:disabled{opacity:.6}
+.hint{font-size:12px;color:#687386;line-height:1.5}
+.error{color:#a00;background:#fff0f0;padding:10px;border-radius:8px;display:none}
+.recent{padding:10px 0;border-bottom:1px solid #eee;overflow-wrap:anywhere}
+.admin{display:none}
+footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
-
-<header class="header">
-
-  <div class="logo">
-    SHC
-  </div>
-
-
-  <div class="title">
-    DANA SUMBANGAN STAND HC
-  </div>
-
-
-  <div class="subtitle">
-    Sokongan untuk perjuangan STAND HC
-  </div>
-
+<header>
+  <div style="font-size:20px;font-weight:bold">SHC</div>
+  <h1>DANA SUMBANGAN STAND HC</h1>
+  <div>Sumbangan melalui QR atau online banking</div>
 </header>
 
-
-
-<main class="container">
-
-
-<!-- =====================================================
-     SUMMARY
-     ===================================================== -->
+<main>
 
 <section class="card">
-
-
-  <div class="summary">
-
-
-    <div class="summary-box">
-
-      <div class="summary-label">
-        Dana Disahkan
-      </div>
-
-
-      <div
-        id="total"
-        class="summary-value">
-
-        RM 0.00
-
-      </div>
-
-    </div>
-
-
-
-    <div class="summary-box">
-
-      <div class="summary-label">
-        Penyumbang
-      </div>
-
-
-      <div
-        id="donors"
-        class="summary-value">
-
-        0
-
-      </div>
-
-    </div>
-
-
+  <div class="stats">
+    <div class="stat">Dana disahkan<b id="total">RM 0.00</b></div>
+    <div class="stat">Penyumbang<b id="donors">0</b></div>
   </div>
-
-
-  <div
-    id="status"
-    class="status">
-
-    Mengemaskini data...
-
-  </div>
-
-
+  <p class="hint center" id="status">Memuatkan data...</p>
 </section>
-
-
-
-<!-- =====================================================
-     QR AFFIN SEBENAR
-     ===================================================== -->
 
 <section class="card">
+  <h2>Bayar melalui QR atau Online Banking</h2>
 
+  <img class="qr" src="qr-code.jpg" alt="QR Affin asal">
 
-  <h2>
-    Sumbangan melalui QR
-  </h2>
+  <p class="center">
+    <b>NORAZAWATI BINTI MD ARIF</b><br>
+    <span class="hint">AFFIN BANK</span><br>
+    <b>No. Akaun: 105730012470</b>
+  </p>
 
-
-  <!--
-  ======================================================
-  PENTING
-
-  JANGAN generate QR menggunakan JavaScript.
-
-  QR di bawah adalah GAMBAR QR AFFIN ASAL.
-
-  Fail mesti berada dalam repository yang sama:
-
-  qr-code.jpg
-
-  ======================================================
-  -->
-
-
-  <img
-    src="qr-code.jpg"
-    class="qr"
-    alt="QR Pembayaran Affin">
-
-
-  <div class="recipient">
-
-    NORAZAWATI BINTI MD ARIF
-
+  <div class="note">
+    <b>Cara pembayaran:</b><br>
+    1. Imbas QR Affin menggunakan aplikasi bank yang menyokong DuitNow QR, atau pilih bank anda untuk membuka laman rasmi online banking.<br>
+    2. Untuk pindahan bank, masukkan nombor akaun <b>105730012470</b> dan pastikan nama penerima yang dipaparkan ialah <b>NORAZAWATI BINTI MD ARIF</b>.<br>
+    3. Sahkan butiran dan lengkapkan pembayaran melalui aplikasi bank anda.<br>
+    4. Simpan resit transaksi dan lampirkan bukti pembayaran dalam borang di bawah.<br><br>
+    <b>Nota:</b> Butiran akaun penerima telah diberikan dan dipaparkan di atas. Semak nama penerima sebelum mengesahkan transaksi. Rekod sumbangan hanya akan diluluskan selepas admin menyemak transaksi sebenar.
   </div>
 
-
-  <div class="bank">
-
-    AFFIN BANK
-
-  </div>
-
-
-  <div class="help">
-
-    Sila buat bayaran melalui QR di atas
-    sebelum menghantar borang.
-
-  </div>
-
-
-  <div class="notice">
-
-    <strong>Nota:</strong><br>
-
-    Gunakan QR Affin asal di atas.
-
-    <br><br>
-
-    Setiap sumbangan akan direkodkan
-    dan disahkan oleh admin selepas
-    semakan transaksi.
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     BORANG SUMBANGAN
-     ===================================================== -->
-
-<section
-  id="formCard"
-  class="card">
-
-
-  <h2>
-    Rekod Sumbangan
-  </h2>
-
-
-  <form
-    id="donationForm">
-
-
-    <label for="name">
-      Nama
-    </label>
-
-
-    <input
-      id="name"
-      maxlength="100"
-      placeholder="Nama penyumbang"
-      required>
-
-
-
-    <label for="phone">
-
-      No. Telefon
-
-      <span
-        style="
-        color:#999;
-        font-size:11px">
-
-        (Pilihan)
-
-      </span>
-
-    </label>
-
-
-    <input
-      id="phone"
-      type="tel"
-      maxlength="30"
-      placeholder="Contoh: 0123456789">
-
-
-
-    <label for="amount">
-
-      Jumlah Sumbangan (RM)
-
-    </label>
-
-
-    <input
-      id="amount"
-      type="number"
-      min="1"
-      max="1000000"
-      step="0.01"
-      placeholder="Contoh: 50"
-      required>
-
-
-
-    <label for="reference">
-
-      Rujukan Transaksi
-
-      <span
-        style="
-        color:#999;
-        font-size:11px">
-
-        (Pilihan)
-
-      </span>
-
-    </label>
-
-
-    <input
-      id="reference"
-      maxlength="100"
-      placeholder="Contoh: FPX / DuitNow / rujukan bank">
-
-
-
-    <label for="note">
-
-      Catatan
-
-      <span
-        style="
-        color:#999;
-        font-size:11px">
-
-        (Pilihan)
-
-      </span>
-
-    </label>
-
-
-    <textarea
-      id="note"
-      maxlength="300"
-      placeholder="Contoh: Infak untuk perjuangan STAND HC"></textarea>
-
-
-
-    <button
-      id="submitButton"
-      type="submit">
-
-      ❤️ HANTAR REKOD SUMBANGAN
-
+  <div class="actions" style="margin-top:14px">
+    <a class="linkbtn"
+       href="https://www.paynet.my/personal-solutions/duitnow/duitnow-qr.html"
+       target="_blank" rel="noopener">
+       Panduan DuitNow QR
+    </a>
+    <button type="button" class="linkbtn"
+       id="bankChooserButton" style="border:0;margin:0">
+       Pilih Online Banking
     </button>
+  </div>
 
+  <div id="bankChooser" style="display:none;margin-top:12px">
+    <label for="bankSelect">Pilih bank anda</label>
+    <select id="bankSelect">
+      <option value="">-- Pilih bank --</option>
+      <option value="https://www.maybank2u.com.my/">Maybank</option>
+      <option value="https://www.cimbclicks.com.my/">CIMB</option>
+      <option value="https://www.pbebank.com/">Public Bank</option>
+      <option value="https://www.rhbgroup.com/">RHB Bank</option>
+      <option value="https://www.hlb.com.my/">Hong Leong Bank</option>
+      <option value="https://www.ambank.com.my/">AmBank</option>
+      <option value="https://www.affinalways.com/">AFFIN Bank</option>
+      <option value="https://www.bankislam.com/">Bank Islam</option>
+      <option value="https://www.bankrakyat.com.my/">Bank Rakyat</option>
+      <option value="https://www.bsn.com.my/">BSN</option>
+      <option value="https://www.muamalat.com.my/">Bank Muamalat</option>
+      <option value="https://www.agrobank.com.my/">Agrobank</option>
+      <option value="https://www.ocbc.com.my/">OCBC</option>
+      <option value="https://www.uob.com.my/">UOB</option>
+      <option value="https://www.hsbc.com.my/">HSBC</option>
+      <option value="https://www.standardchartered.com.my/">Standard Chartered</option>
+      <option value="https://www.alliancebank.com.my/">Alliance Bank</option>
+      <option value="https://www.mbsbbank.com/">MBSB Bank</option>
+    </select>
+    <button type="button" id="openSelectedBank">Buka laman bank</button>
+    <p class="hint">
+      Pautan ini membuka laman bank sahaja. Log masuk dan lakukan pindahan sendiri. Jangan masukkan kata laluan, PIN atau OTP bank dalam aplikasi STAND HC.
+    </p>
+  </div>
 
+  <button type="button" id="copyAccount" style="background:#eaf5ff;color:#075fae">
+    Salin Nombor Akaun
+  </button>
+</section>
+
+<section class="card" id="formCard">
+  <h2>Hantar Rekod Sumbangan</h2>
+
+  <form id="form">
+    <label for="name">Nama penyumbang *</label>
+    <input id="name" maxlength="100" required>
+
+    <label for="phone">No. telefon</label>
+    <input id="phone" type="tel" maxlength="30">
+
+    <label for="amount">Jumlah sumbangan (RM) *</label>
+    <input id="amount" type="number" min="0.01"
+      max="1000000" step="0.01" required>
+
+    <label for="reference">Rujukan transaksi</label>
+    <input id="reference" maxlength="100">
+
+    <label for="proof">Bukti pembayaran (JPG/PNG/WEBP/PDF, maks 2 MB) *</label>
+    <input id="proof" type="file"
+      accept="image/jpeg,image/png,image/webp,application/pdf" required>
+
+    <p class="hint">
+      Lampirkan resit atau screenshot transaksi. Jangan lampirkan kata laluan, PIN atau OTP.
+    </p>
+
+    <label for="note">Catatan</label>
+    <textarea id="note" maxlength="300"
+      placeholder="Contoh: Sumbangan untuk kejohanan STAND HC"></textarea>
+
+    <button id="submit" type="submit">HANTAR SUMBANGAN</button>
   </form>
 
-
-  <div
-    id="loading"
-    class="loading">
-
-    Sedang menghantar maklumat...
-
-  </div>
-
-
-  <div
-    id="error"
-    class="error">
-
-  </div>
-
-
+  <p class="hint" id="loading" style="display:none">
+    Menghantar rekod dan bukti pembayaran...
+  </p>
+  <p class="error" id="err"></p>
 </section>
 
-
-
-<!-- =====================================================
-     TERIMA KASIH
-     ===================================================== -->
-
-<section
-  id="thankYou"
-  class="card thanks">
-
-
-  <div class="thanks-icon">
-
-    🙏
-
-  </div>
-
-
-  <h2>
-    TERIMA KASIH!
-  </h2>
-
-
-  <p id="thankMessage">
-
-    Terima kasih atas sumbangan
-    anda kepada STAND HC.
-
+<section class="card" id="thanks" style="display:none;text-align:center">
+  <h2>🙏 Terima kasih!</h2>
+  <p id="thanksText"></p>
+  <p class="hint">
+    Rekod menunggu semakan admin. Penghantaran borang bukan pengesahan bahawa wang telah diterima.
   </p>
-
-
-  <p
-    style="
-    color:#737e8f;
-    font-size:12px">
-
-    Rekod sumbangan telah diterima
-    untuk semakan admin.
-
-  </p>
-
-
-  <button
-    class="new"
-    onclick="newDonation()">
-
-    BUAT SUMBANGAN LAIN
-
-  </button>
-
-
+  <button id="another">Hantar sumbangan lain</button>
 </section>
-
-
-
-<!-- =====================================================
-     SUMBANGAN TERKINI
-     ===================================================== -->
 
 <section class="card">
-
-
-  <h2>
-    Sumbangan Terkini
-  </h2>
-
-
-  <button
-    id="refreshButton"
-    style="
-    width:auto;
-    height:38px;
-    padding:0 15px;
-    margin:0 0 10px;
-    float:right;
-    background:#eaf5ff;
-    color:#0878d1"
-    onclick="loadRecent()">
-
-    Refresh
-
-  </button>
-
-
-  <div
-    style="
-    clear:both">
-
-  </div>
-
-
-  <div id="recent">
-
-    Memuatkan...
-
-  </div>
-
-
+  <h2>Sumbangan terkini yang disahkan</h2>
+  <button id="refresh">Refresh</button>
+  <div id="recent" class="hint">Memuatkan...</div>
 </section>
-
-
-
-<!-- =====================================================
-     ADMIN
-     ===================================================== -->
 
 <section class="card">
+  <h2>Admin</h2>
+  <button id="toggle">Buka Admin</button>
 
-
-  <h2>
-    Admin
-  </h2>
-
-
-  <button
-    class="admin-toggle"
-    onclick="toggleAdmin()">
-
-    BUKA ADMIN
-
-  </button>
-
-
-  <div
-    id="admin"
-    class="admin">
-
-
-    <label for="adminPin">
-
-      PIN Admin
-
-    </label>
-
-
-    <input
-      id="adminPin"
-      type="password"
-      inputmode="numeric"
-      placeholder="Masukkan PIN admin">
-
-
-    <button
-      onclick="loadAdmin()">
-
-      LOG MASUK ADMIN
-
-    </button>
-
-
-    <div
-      id="adminError"
-      class="error">
-
-    </div>
-
-
-    <div
-      id="adminList"
-      style="
-      margin-top:12px">
-
-    </div>
-
-
+  <div class="admin" id="admin">
+    <label for="pin">PIN admin</label>
+    <input id="pin" type="password" autocomplete="current-password">
+    <button id="login">Log masuk / Muat rekod</button>
+    <div id="adminList"></div>
+    <p class="error" id="adminErr"></p>
   </div>
-
-
 </section>
-
 
 </main>
 
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer class="footer">
-
-  <strong>
-    STAND HC © 2026
-  </strong>
-
-  <br>
-
-  Pasir Gudang Stand Handball Club
-
+<footer>
+  STAND HC · Sumbangan tertakluk kepada pengesahan transaksi sebenar.
 </footer>
 
-
-
 <script>
+/* GANTIKAN DENGAN URL WEB APP APPS SCRIPT YANG BERAKHIR /exec */
+const API_URL = "YOUR_APPS_SCRIPT_WEB_APP_URL";
 
+const $ = id => document.getElementById(id);
 
-/**********************************************************
- *
- * GOOGLE APPS SCRIPT WEB APP URL
- *
- * WAJIB tukar kepada URL /exec sebenar.
- *
- **********************************************************/
+const rm = n => Number(n || 0).toLocaleString("ms-MY", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2
+});
 
-const API_URL =
-  "https://script.google.com/macros/s/AKfycbw8KxfAzKQCV1BrEs3ideXRB1-s5mw5QVAsk3gu0wz3Fi85gbkvBkRKstj7wglvZoD8Sw/exec";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;"
+}[c]));
 
-
-
-/**********************************************************
- * FORMAT RM
- **********************************************************/
-
-function formatRM(v) {
-
-  return Number(
-    v || 0
-  ).toLocaleString(
-    "ms-MY",
-    {
-      minimumFractionDigits: 2,
-
-      maximumFractionDigits: 2
-    }
-  );
-
-}
-
-
-
-/**********************************************************
- * ERROR
- **********************************************************/
-
-function showError(
-  m,
-  id = "error"
-) {
-
-  const e =
-    document.getElementById(
-      id
-    );
-
-
-  e.textContent =
-    m;
-
-
-  e.style.display =
-    "block";
-
-}
-
-
-function hideError(
-  id = "error"
-) {
-
-  const e =
-    document.getElementById(
-      id
-    );
-
-
-  e.textContent =
-    "";
-
-
-  e.style.display =
-    "none";
-
-}
-
-
-
-/**********************************************************
- * JSONP
- **********************************************************/
-
-function jsonp(
-  action,
-  extra = {},
-  callback
-) {
-
-
-  if (
-    !API_URL ||
-    API_URL.indexOf(
-      "YOUR_"
-    ) === 0
-  ) {
-
-    callback({
-      success:
-        false,
-
-      message:
-        "URL Apps Script belum dimasukkan."
-    });
-
-    return;
-
+function ready() {
+  if (!API_URL || API_URL.startsWith("YOUR_")) {
+    throw Error("Masukkan URL Apps Script /exec dalam index.html.");
   }
+}
 
+function get(action, extra = {}) {
+  ready();
 
-  const cb =
-    "cb_" +
-    Date.now() +
-    "_" +
-    Math.floor(
-      Math.random() * 10000
-    );
+  return new Promise((resolve, reject) => {
+    const cb = "cb" + Date.now() +
+      Math.random().toString(36).slice(2);
 
+    const script = document.createElement("script");
 
-  const s =
-    document.createElement(
-      "script"
-    );
-
-
-  const p =
-    new URLSearchParams({
-      action,
-      callback: cb,
-      ...extra
-    });
-
-
-  s.src =
-    API_URL +
-    "?" +
-    p.toString();
-
-
-  window[cb] =
-    function(data) {
-
-      callback(data);
-
+    const timer = setTimeout(() => {
       cleanup();
+      reject(Error("Permintaan tamat masa. Semak Apps Script."));
+    }, 15000);
 
-    };
-
-
-  s.onerror =
-    function() {
-
-      callback({
-        success:
-          false,
-
-        message:
-          "Gagal menghubungi Apps Script."
-      });
-
-      cleanup();
-
-    };
-
-
-  function cleanup() {
-
-    try {
-
+    function cleanup() {
+      clearTimeout(timer);
       delete window[cb];
-
+      script.remove();
     }
 
-    catch(e) {}
+    window[cb] = data => {
+      cleanup();
+      resolve(data);
+    };
 
+    script.onerror = () => {
+      cleanup();
+      reject(Error("Gagal menghubungi Apps Script."));
+    };
 
-    if (
-      s.parentNode
-    ) {
+    script.src = API_URL + "?" +
+      new URLSearchParams({ action, callback: cb, ...extra });
 
-      s.parentNode
-        .removeChild(
-          s
-        );
+    document.body.appendChild(script);
+  });
+}
 
-    }
+async function summary() {
+  try {
+    const d = await get("summary");
+    if (!d.success) throw Error(d.message || "Gagal membaca data.");
 
+    $("total").textContent = "RM " + rm(d.total);
+    $("donors").textContent = d.donors || 0;
+    $("status").textContent = "Data dikemaskini";
+  } catch (e) {
+    $("status").textContent = e.message;
+  }
+}
+
+async function recent() {
+  try {
+    const d = await get("recent");
+    if (!d.success) throw Error(d.message || "Gagal membaca rekod.");
+
+    $("recent").innerHTML = d.items?.length
+      ? d.items.map(x => `
+          <div class="recent">
+            <b>
+              ${esc(x.name)}
+              <span style="float:right">RM ${rm(x.amount)}</span>
+            </b>
+            <small>${esc(x.date || "")} · Disahkan</small>
+          </div>
+        `).join("")
+      : "Belum ada sumbangan disahkan.";
+  } catch (e) {
+    $("recent").textContent = e.message;
+  }
+}
+
+$("form").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  $("err").style.display = "none";
+
+  const file = $("proof").files[0];
+
+  if (!file) {
+    $("err").textContent = "Sila lampirkan bukti pembayaran.";
+    $("err").style.display = "block";
+    return;
   }
 
-
-  document.body
-    .appendChild(
-      s
-    );
-
-}
-
-
-
-/**********************************************************
- * LOAD SUMMARY
- **********************************************************/
-
-function loadSummary() {
-
-
-  jsonp(
-    "summary",
-    {},
-    function(d) {
-
-
-      if (
-        d.success
-      ) {
-
-
-        document
-          .getElementById(
-            "total"
-          )
-          .textContent =
-          "RM " +
-          formatRM(
-            d.total
-          );
-
-
-        document
-          .getElementById(
-            "donors"
-          )
-          .textContent =
-          Number(
-            d.donors || 0
-          );
-
-
-        document
-          .getElementById(
-            "status"
-          )
-          .textContent =
-          "✓ Data dikemaskini";
-
-      }
-
-      else {
-
-        document
-          .getElementById(
-            "status"
-          )
-          .textContent =
-          d.message ||
-          "Data belum tersedia.";
-
-      }
-
-    }
-  );
-
-}
-
-
-
-/**********************************************************
- * LOAD SUMBANGAN TERKINI
- **********************************************************/
-
-function loadRecent() {
-
-
-  const box =
-    document.getElementById(
-      "recent"
-    );
-
-
-  box.textContent =
-    "Memuatkan...";
-
-
-  jsonp(
-    "recent",
-    {},
-    function(d) {
-
-
-      if (
-        !d.success
-      ) {
-
-        box.textContent =
-          d.message ||
-          "Data belum tersedia.";
-
-        return;
-
-      }
-
-
-      if (
-        !d.items ||
-        !d.items.length
-      ) {
-
-        box.textContent =
-          "Belum ada sumbangan yang disahkan.";
-
-        return;
-
-      }
-
-
-      box.innerHTML =
-        d.items
-          .map(
-            function(x) {
-
-              return `
-
-                <div class="recent-item">
-
-                  <span
-                    class="recent-amount">
-
-                    RM ${
-                      formatRM(
-                        x.amount
-                      )
-                    }
-
-                  </span>
-
-
-                  <div
-                    class="recent-name">
-
-                    ${
-                      escapeHtml(
-                        x.name
-                      )
-                    }
-
-                  </div>
-
-
-                  <div
-                    class="recent-meta">
-
-                    ${
-                      escapeHtml(
-                        x.date || ""
-                      )
-                    }
-
-                    • Sumbangan disahkan
-
-                  </div>
-
-                </div>
-
-              `;
-
-            }
-          )
-          .join("");
-
-    }
-  );
-
-}
-
-
-
-/**********************************************************
- * ESCAPE HTML
- **********************************************************/
-
-function escapeHtml(s) {
-
-  return String(
-    s ?? ""
-  )
-  .replace(
-    /[&<>"']/g,
-    function(m) {
-
-      return {
-
-        "&":
-          "&amp;",
-
-        "<":
-          "&lt;",
-
-        ">":
-          "&gt;",
-
-        '"':
-          "&quot;",
-
-        "'":
-          "&#039;"
-
-      }[m];
-
-    }
-  );
-
-}
-
-
-
-/**********************************************************
- * SUBMIT SUMBANGAN
- **********************************************************/
-
-document
-  .getElementById(
-    "donationForm"
-  )
-  .addEventListener(
-    "submit",
-    function(e) {
-
-
-      e.preventDefault();
-
-
-      hideError();
-
-
-      if (
-        !API_URL ||
-        API_URL.indexOf(
-          "YOUR_"
-        ) === 0
-      ) {
-
-        showError(
-          "URL Google Apps Script belum dimasukkan."
-        );
-
-        return;
-
-      }
-
-
-      const name =
-        document
-          .getElementById(
-            "name"
-          )
-          .value
-          .trim();
-
-
-      const phone =
-        document
-          .getElementById(
-            "phone"
-          )
-          .value
-          .trim();
-
-
-      const amount =
-        Number(
-          document
-            .getElementById(
-              "amount"
-            )
-            .value
-        );
-
-
-      const reference =
-        document
-          .getElementById(
-            "reference"
-          )
-          .value
-          .trim();
-
-
-      const note =
-        document
-          .getElementById(
-            "note"
-          )
-          .value
-          .trim();
-
-
-      if (
-        !name
-      ) {
-
-        showError(
-          "Sila masukkan nama."
-        );
-
-        return;
-
-      }
-
-
-      if (
-        !amount ||
-        amount <= 0
-      ) {
-
-        showError(
-          "Sila masukkan jumlah sumbangan."
-        );
-
-        return;
-
-      }
-
-
-      const button =
-        document
-          .getElementById(
-            "submitButton"
-          );
-
-
-      const loading =
-        document
-          .getElementById(
-            "loading"
-          );
-
-
-      button.disabled =
-        true;
-
-
-      button.textContent =
-        "SEDANG MENGHANTAR...";
-
-
-      loading.style.display =
-        "block";
-
-
-      const fd =
-        new FormData();
-
-
-      fd.append(
-        "action",
-        "submit"
-      );
-
-
-      fd.append(
-        "name",
-        name
-      );
-
-
-      fd.append(
-        "phone",
-        phone
-      );
-
-
-      fd.append(
-        "amount",
-        amount.toFixed(
-          2
-        )
-      );
-
-
-      fd.append(
-        "reference",
-        reference
-      );
-
-
-      fd.append(
-        "note",
-        note
-      );
-
-
-      fetch(
-        API_URL,
-        {
-          method:
-            "POST",
-
-          body:
-            fd,
-
-          mode:
-            "no-cors"
-        }
-      )
-
-
-      .then(
-        function() {
-
-
-          document
-            .getElementById(
-              "formCard"
-            )
-            .style.display =
-            "none";
-
-
-          document
-            .getElementById(
-              "thankYou"
-            )
-            .style.display =
-            "block";
-
-
-          document
-            .getElementById(
-              "thankMessage"
-            )
-            .textContent =
-
-            "Terima kasih " +
-            name +
-            " atas sumbangan RM " +
-            formatRM(
-              amount
-            ) +
-            " kepada STAND HC.";
-
-
-          document
-            .getElementById(
-              "donationForm"
-            )
-            .reset();
-
-
-          button.disabled =
-            false;
-
-
-          button.textContent =
-            "❤️ HANTAR REKOD SUMBANGAN";
-
-
-          loading.style.display =
-            "none";
-
-
-          loadSummary();
-
-          loadRecent();
-
-        }
-      )
-
-
-      .catch(
-        function(err) {
-
-
-          console.error(
-            err
-          );
-
-
-          button.disabled =
-            false;
-
-
-          button.textContent =
-            "❤️ HANTAR REKOD SUMBANGAN";
-
-
-          loading.style.display =
-            "none";
-
-
-          showError(
-            "Gagal menghantar data. Sila cuba lagi."
-          );
-
-        }
-      );
-
-    }
-  );
-
-
-
-/**********************************************************
- * NEW DONATION
- **********************************************************/
-
-function newDonation() {
-
-
-  document
-    .getElementById(
-      "thankYou"
-    )
-    .style.display =
-    "none";
-
-
-  document
-    .getElementById(
-      "formCard"
-    )
-    .style.display =
-    "block";
-
-
-  document
-    .getElementById(
-      "donationForm"
-    )
-    .reset();
-
-
-  document
-    .getElementById(
-      "formCard"
-    )
-    .scrollIntoView({
-      behavior:
-        "smooth"
+  if (file.size > 2 * 1024 * 1024) {
+    $("err").textContent = "Fail melebihi had 2 MB.";
+    $("err").style.display = "block";
+    return;
+  }
+
+  if (![
+    "image/jpeg", "image/png", "image/webp", "application/pdf"
+  ].includes(file.type)) {
+    $("err").textContent = "Format fail tidak disokong.";
+    $("err").style.display = "block";
+    return;
+  }
+
+  const amount = Number($("amount").value);
+
+  if (!Number.isFinite(amount) || amount <= 0) {
+    $("err").textContent = "Jumlah sumbangan tidak sah.";
+    $("err").style.display = "block";
+    return;
+  }
+
+  const button = $("submit");
+  button.disabled = true;
+  $("loading").style.display = "block";
+
+  try {
+    ready();
+
+    const data = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(Error("Gagal membaca fail."));
+      reader.readAsDataURL(file);
     });
 
-}
+    const payload = {
+      action: "submit",
+      name: $("name").value.trim(),
+      phone: $("phone").value.trim(),
+      amount: amount.toFixed(2),
+      reference: $("reference").value.trim(),
+      note: $("note").value.trim(),
+      proofName: file.name,
+      proofMime: file.type,
+      proofData: data
+    };
 
+    /*
+      PENTING:
+      no-cors tidak membolehkan browser membaca keputusan server.
+      Sahkan rekod sebenar dalam Google Sheet selepas ujian.
+    */
+    await fetch(API_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: new URLSearchParams(payload)
+    });
 
+    $("formCard").style.display = "none";
+    $("thanks").style.display = "block";
 
-/**********************************************************
- * ADMIN TOGGLE
- **********************************************************/
+    $("thanksText").textContent =
+      "Terima kasih " + payload.name +
+      ". Rekod telah dihantar untuk semakan. " +
+      "Penghantaran ini bukan pengesahan penerimaan wang.";
 
-function toggleAdmin() {
+    $("form").reset();
+    summary();
+    recent();
 
-
-  const a =
-    document.getElementById(
-      "admin"
-    );
-
-
-  a.style.display =
-    a.style.display ===
-    "block"
-      ? "none"
-      : "block";
-
-}
-
-
-
-/**********************************************************
- * LOAD ADMIN
- **********************************************************/
-
-function loadAdmin() {
-
-
-  hideError(
-    "adminError"
-  );
-
-
-  const pin =
-    document
-      .getElementById(
-        "adminPin"
-      )
-      .value
-      .trim();
-
-
-  if (
-    !pin
-  ) {
-
-    showError(
-      "Masukkan PIN admin.",
-      "adminError"
-    );
-
-    return;
-
+  } catch (e) {
+    $("err").textContent = e.message;
+    $("err").style.display = "block";
+  } finally {
+    button.disabled = false;
+    $("loading").style.display = "none";
   }
+});
 
+$("another").addEventListener("click", () => {
+  $("thanks").style.display = "none";
+  $("formCard").style.display = "block";
+  $("formCard").scrollIntoView({ behavior: "smooth" });
+});
 
-  jsonp(
-    "adminList",
-    {
-      pin: pin
-    },
-    function(d) {
+$("refresh").addEventListener("click", () => {
+  summary();
+  recent();
+});
 
+$("toggle").addEventListener("click", () => {
+  $("admin").style.display =
+    $("admin").style.display === "block" ? "none" : "block";
+});
 
-      if (
-        !d.success
-      ) {
+$("login").addEventListener("click", async () => {
+  $("adminErr").style.display = "none";
 
-        showError(
-          d.message ||
-          "PIN tidak sah.",
-          "adminError"
-        );
+  try {
+    const d = await get("adminList", { pin: $("pin").value });
 
-        return;
+    if (!d.success) throw Error(d.message || "Akses admin ditolak.");
 
-      }
+    $("adminList").innerHTML = (d.items || []).map(x => `
+      <div class="recent">
+        <b>${esc(x.name)} — RM ${rm(x.amount)}</b>
+        <p>
+          Status: ${esc(x.status)}<br>
+          <a href="${esc(x.proofUrl)}" target="_blank" rel="noopener">
+            Lihat bukti pembayaran
+          </a>
+        </p>
+        ${String(x.status).toUpperCase() === "PENDING" ? `
+          <button data-id="${esc(x.id)}" data-status="APPROVED">
+            APPROVE
+          </button>
+          <button data-id="${esc(x.id)}" data-status="REJECTED"
+            style="background:#b33">REJECT</button>
+        ` : ""}
+      </div>
+    `).join("") || "Tiada rekod.";
 
-
-      renderAdmin(
-        d.items ||
-        []
+    $("adminList").querySelectorAll("button[data-id]").forEach(btn => {
+      btn.addEventListener("click", () =>
+        statusChange(btn.dataset.id, btn.dataset.status)
       );
+    });
 
-    }
-  );
+  } catch (e) {
+    $("adminErr").textContent = e.message;
+    $("adminErr").style.display = "block";
+  }
+});
 
+async function statusChange(id, status) {
+  if (!confirm("Tukar status kepada " + status + "?")) return;
+
+  try {
+    ready();
+
+    await fetch(API_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+      body: new URLSearchParams({
+        action: "status",
+        pin: $("pin").value,
+        id,
+        status
+      })
+    });
+
+    setTimeout(() => {
+      $("login").click();
+      summary();
+      recent();
+    }, 1500);
+
+  } catch (e) {
+    alert(e.message);
+  }
 }
 
+/* Salin nombor akaun penerima */
+$("copyAccount").addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText("105730012470");
+    $("copyAccount").textContent = "Nombor Akaun Disalin";
+    setTimeout(() => {
+      $("copyAccount").textContent = "Salin Nombor Akaun";
+    }, 1800);
+  } catch (e) {
+    alert("AFFIN BANK: 105730012470");
+  }
+});
 
+/* Pilihan online banking */
+$("bankChooserButton").addEventListener("click", () => {
+  const box = $("bankChooser");
+  box.style.display = box.style.display === "block" ? "none" : "block";
+});
 
-/**********************************************************
- * RENDER ADMIN
- **********************************************************/
+$("openSelectedBank").addEventListener("click", () => {
+  const url = $("bankSelect").value;
 
-function renderAdmin(
-  items
-) {
-
-
-  const box =
-    document.getElementById(
-      "adminList"
-    );
-
-
-  if (
-    !items.length
-  ) {
-
-    box.innerHTML =
-      "<div style='font-size:13px;color:#777'>Tiada rekod.</div>";
-
+  if (!url) {
+    alert("Sila pilih bank dahulu.");
     return;
-
   }
 
-
-  box.innerHTML =
-    items
-      .map(
-        function(x) {
-
-          return `
-
-            <div class="admin-row">
-
-              <b>
-                ${
-                  escapeHtml(
-                    x.name
-                  )
-                }
-              </b>
-
-              —
-              RM ${
-                formatRM(
-                  x.amount
-                )
-              }
-
-
-              <br>
-
-
-              <span
-                style="color:#777">
-
-                ${
-                  escapeHtml(
-                    x.phone ||
-                    ""
-                  )
-                }
-
-                ${
-                  escapeHtml(
-                    x.reference ||
-                    ""
-                  )
-                }
-
-              </span>
-
-
-              <br>
-
-
-              <span
-                class="pill ${
-                  String(
-                    x.status
-                  ).toLowerCase()
-                }">
-
-                ${
-                  escapeHtml(
-                    x.status
-                  )
-                }
-
-              </span>
-
-
-              ${
-                String(
-                  x.status
-                ).toUpperCase()
-                === "PENDING"
-
-                ?
-
-                `
-
-                <div
-                  class="admin-actions">
-
-                  <button
-                    class="approve"
-                    onclick="setStatus(
-                      '${x.id}',
-                      'APPROVED'
-                    )">
-
-                    APPROVE
-
-                  </button>
-
-
-                  <button
-                    class="reject"
-                    onclick="setStatus(
-                      '${x.id}',
-                      'REJECTED'
-                    )">
-
-                    REJECT
-
-                  </button>
-
-                </div>
-
-                `
-
-                :
-
-                ""
-
-              }
-
-            </div>
-
-          `;
-
-        }
-      )
-      .join("");
-
-}
-
-
-
-/**********************************************************
- * CHANGE STATUS
- **********************************************************/
-
-function setStatus(
-  id,
-  status
-) {
-
-
-  const pin =
-    document
-      .getElementById(
-        "adminPin"
-      )
-      .value
-      .trim();
-
-
-  if (
-    !pin
-  ) {
-
-    return;
-
-  }
-
-
-  const fd =
-    new FormData();
-
-
-  fd.append(
-    "action",
-    "status"
-  );
-
-
-  fd.append(
-    "pin",
-    pin
-  );
-
-
-  fd.append(
-    "id",
-    id
-  );
-
-
-  fd.append(
-    "status",
-    status
-  );
-
-
-  fetch(
-    API_URL,
-    {
-      method:
-        "POST",
-
-      body:
-        fd,
-
-      mode:
-        "no-cors"
-    }
-  )
-
-
-  .then(
-    function() {
-
-      setTimeout(
-        function() {
-
-          loadAdmin();
-
-          loadSummary();
-
-          loadRecent();
-
-        },
-        700
-      );
-
-    }
-  );
-
-}
-
-
-
-/**********************************************************
- * START
- **********************************************************/
-
-loadSummary();
-
-loadRecent();
-
-
+  window.open(url, "_blank", "noopener,noreferrer");
+});
+
+summary();
+recent();
 </script>
-
-
 </body>
-
 </html>
