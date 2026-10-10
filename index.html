@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0878d1">
 <title>Dana Sumbangan STAND HC</title>
-
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#f1f5fa;color:#172033;font-family:Arial,sans-serif}
@@ -33,16 +32,14 @@ button:disabled{opacity:.6}
 footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
 </style>
 </head>
-
 <body>
 <header>
-  <div style="font-size:20px;font-weight:bold">SHC</div>
+  <div style="font-size:20px;font-weight:bold">STAND HC</div>
   <h1>DANA SUMBANGAN STAND HC</h1>
   <div>Sumbangan melalui QR atau online banking</div>
 </header>
 
 <main>
-
 <section class="card">
   <div class="stats">
     <div class="stat">Dana disahkan<b id="total">RM 0.00</b></div>
@@ -53,9 +50,7 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
 
 <section class="card">
   <h2>Bayar melalui QR atau Online Banking</h2>
-
-  <img class="qr" src="qr-code.jpg" alt="QR Affin asal">
-
+  <img class="qr" src="qr-code.jpg" alt="QR Affin">
   <p class="center">
     <b>NORAZAWATI BINTI MD ARIF</b><br>
     <span class="hint">AFFIN BANK</span><br>
@@ -64,23 +59,16 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
 
   <div class="note">
     <b>Cara pembayaran:</b><br>
-    1. Imbas QR Affin menggunakan aplikasi bank yang menyokong DuitNow QR, atau pilih bank anda untuk membuka laman rasmi online banking.<br>
-    2. Untuk pindahan bank, masukkan nombor akaun <b>105730012470</b> dan pastikan nama penerima yang dipaparkan ialah <b>NORAZAWATI BINTI MD ARIF</b>.<br>
-    3. Sahkan butiran dan lengkapkan pembayaran melalui aplikasi bank anda.<br>
-    4. Simpan resit transaksi dan lampirkan bukti pembayaran dalam borang di bawah.<br><br>
-    <b>Nota:</b> Butiran akaun penerima telah diberikan dan dipaparkan di atas. Semak nama penerima sebelum mengesahkan transaksi. Rekod sumbangan hanya akan diluluskan selepas admin menyemak transaksi sebenar.
+    1. Imbas QR Affin atau pilih bank untuk membuka laman rasmi online banking.<br>
+    2. Masukkan nombor akaun 105730012470 dan pastikan nama penerima betul.<br>
+    3. Lengkapkan pembayaran melalui aplikasi bank anda.<br>
+    4. Simpan resit dan lampirkan bukti pembayaran di bawah.<br><br>
+    Rekod sumbangan hanya akan diluluskan selepas admin menyemak transaksi sebenar.
   </div>
 
   <div class="actions" style="margin-top:14px">
-    <a class="linkbtn"
-       href="https://www.paynet.my/personal-solutions/duitnow/duitnow-qr.html"
-       target="_blank" rel="noopener">
-       Panduan DuitNow QR
-    </a>
-    <button type="button" class="linkbtn"
-       id="bankChooserButton" style="border:0;margin:0">
-       Pilih Online Banking
-    </button>
+    <a class="linkbtn" href="https://www.paynet.my/personal-solutions/duitnow/duitnow-qr.html" target="_blank" rel="noopener">Panduan DuitNow QR</a>
+    <button type="button" class="linkbtn" id="bankChooserButton" style="border:0;margin:0">Pilih Online Banking</button>
   </div>
 
   <div id="bankChooser" style="display:none;margin-top:12px">
@@ -102,24 +90,19 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
       <option value="https://www.ocbc.com.my/">OCBC</option>
       <option value="https://www.uob.com.my/">UOB</option>
       <option value="https://www.hsbc.com.my/">HSBC</option>
-      <option value="https://www.standardchartered.com.my/">Standard Chartered</option>
+      <option value="https://www.sc.com/my/">Standard Chartered</option>
       <option value="https://www.alliancebank.com.my/">Alliance Bank</option>
       <option value="https://www.mbsbbank.com/">MBSB Bank</option>
     </select>
     <button type="button" id="openSelectedBank">Buka laman bank</button>
-    <p class="hint">
-      Pautan ini membuka laman bank sahaja. Log masuk dan lakukan pindahan sendiri. Jangan masukkan kata laluan, PIN atau OTP bank dalam aplikasi STAND HC.
-    </p>
+    <p class="hint">Pautan ini membuka laman bank sahaja. Jangan masukkan kata laluan, PIN atau OTP bank dalam aplikasi STAND HC.</p>
   </div>
 
-  <button type="button" id="copyAccount" style="background:#eaf5ff;color:#075fae">
-    Salin Nombor Akaun
-  </button>
+  <button type="button" id="copyAccount" style="background:#eaf5ff;color:#075fae">Salin Nombor Akaun</button>
 </section>
 
 <section class="card" id="formCard">
   <h2>Hantar Rekod Sumbangan</h2>
-
   <form id="form">
     <label for="name">Nama penyumbang *</label>
     <input id="name" maxlength="100" required>
@@ -128,39 +111,27 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
     <input id="phone" type="tel" maxlength="30">
 
     <label for="amount">Jumlah sumbangan (RM) *</label>
-    <input id="amount" type="number" min="0.01"
-      max="1000000" step="0.01" required>
+    <input id="amount" type="number" min="0.01" max="1000000" step="0.01" required>
 
     <label for="reference">Rujukan transaksi</label>
     <input id="reference" maxlength="100">
 
     <label for="proof">Bukti pembayaran (JPG/PNG/WEBP/PDF, maks 2 MB) *</label>
-    <input id="proof" type="file"
-      accept="image/jpeg,image/png,image/webp,application/pdf" required>
-
-    <p class="hint">
-      Lampirkan resit atau screenshot transaksi. Jangan lampirkan kata laluan, PIN atau OTP.
-    </p>
+    <input id="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required>
+    <p class="hint">Lampirkan resit atau screenshot transaksi. Jangan lampirkan kata laluan, PIN atau OTP.</p>
 
     <label for="note">Catatan</label>
-    <textarea id="note" maxlength="300"
-      placeholder="Contoh: Sumbangan untuk kejohanan STAND HC"></textarea>
-
+    <textarea id="note" maxlength="300" placeholder="Contoh: Sumbangan untuk kejohanan STAND HC"></textarea>
     <button id="submit" type="submit">HANTAR SUMBANGAN</button>
   </form>
-
-  <p class="hint" id="loading" style="display:none">
-    Menghantar rekod dan bukti pembayaran...
-  </p>
+  <p class="hint" id="loading" style="display:none">Menghantar rekod dan bukti pembayaran...</p>
   <p class="error" id="err"></p>
 </section>
 
 <section class="card" id="thanks" style="display:none;text-align:center">
   <h2>🙏 Terima kasih!</h2>
   <p id="thanksText"></p>
-  <p class="hint">
-    Rekod menunggu semakan admin. Penghantaran borang bukan pengesahan bahawa wang telah diterima.
-  </p>
+  <p class="hint">Rekod perlu disemak admin. Penghantaran borang bukan pengesahan wang telah diterima.</p>
   <button id="another">Hantar sumbangan lain</button>
 </section>
 
@@ -173,56 +144,35 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
 <section class="card">
   <h2>Admin</h2>
   <button id="toggle">Buka Admin</button>
-
   <div class="admin" id="admin">
     <label for="pin">PIN admin</label>
     <input id="pin" type="password" autocomplete="current-password">
     <button id="login">Log masuk / Muat rekod</button>
-    <div id="adminList"></div>
     <p class="error" id="adminErr"></p>
+    <div id="adminList"></div>
   </div>
 </section>
-
 </main>
 
-<footer>
-  STAND HC · Sumbangan tertakluk kepada pengesahan transaksi sebenar.
-</footer>
+<footer>STAND HC · Sumbangan tertakluk kepada pengesahan transaksi sebenar.</footer>
 
 <script>
-/* GANTIKAN DENGAN URL WEB APP APPS SCRIPT YANG BERAKHIR /exec */
+/* URL Web App Apps Script semasa */
 const API_URL = "https://script.google.com/macros/s/AKfycbyU3DLxyek4XyHzx3EMZM6KQbVgdR2QElggxUiRDBHhu4N_4nP89DopVyeE6bUeI93h/exec";
 
 const $ = id => document.getElementById(id);
-
 const rm = n => Number(n || 0).toLocaleString("ms-MY", {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2
 });
-
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-  "'": "&#39;"
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
 }[c]));
 
-function ready() {
-  if (!API_URL || API_URL.startsWith("YOUR_")) {
-    throw Error("Masukkan URL Apps Script /exec dalam index.html.");
-  }
-}
-
 function get(action, extra = {}) {
-  ready();
-
   return new Promise((resolve, reject) => {
-    const cb = "cb" + Date.now() +
-      Math.random().toString(36).slice(2);
-
+    const cb = "cb" + Date.now() + Math.random().toString(36).slice(2);
     const script = document.createElement("script");
-
     const timer = setTimeout(() => {
       cleanup();
       reject(Error("Permintaan tamat masa. Semak Apps Script."));
@@ -238,24 +188,25 @@ function get(action, extra = {}) {
       cleanup();
       resolve(data);
     };
-
     script.onerror = () => {
       cleanup();
       reject(Error("Gagal menghubungi Apps Script."));
     };
-
     script.src = API_URL + "?" +
       new URLSearchParams({ action, callback: cb, ...extra });
-
     document.body.appendChild(script);
   });
+}
+
+function showError(id, message) {
+  $(id).textContent = message;
+  $(id).style.display = "block";
 }
 
 async function summary() {
   try {
     const d = await get("summary");
     if (!d.success) throw Error(d.message || "Gagal membaca data.");
-
     $("total").textContent = "RM " + rm(d.total);
     $("donors").textContent = d.donors || 0;
     $("status").textContent = "Data dikemaskini";
@@ -268,14 +219,10 @@ async function recent() {
   try {
     const d = await get("recent");
     if (!d.success) throw Error(d.message || "Gagal membaca rekod.");
-
     $("recent").innerHTML = d.items?.length
       ? d.items.map(x => `
           <div class="recent">
-            <b>
-              ${esc(x.name)}
-              <span style="float:right">RM ${rm(x.amount)}</span>
-            </b>
+            <b>${esc(x.name)} <span style="float:right">RM ${rm(x.amount)}</span></b><br>
             <small>${esc(x.date || "")} · Disahkan</small>
           </div>
         `).join("")
@@ -287,37 +234,18 @@ async function recent() {
 
 $("form").addEventListener("submit", async e => {
   e.preventDefault();
-
   $("err").style.display = "none";
 
   const file = $("proof").files[0];
-
-  if (!file) {
-    $("err").textContent = "Sila lampirkan bukti pembayaran.";
-    $("err").style.display = "block";
-    return;
-  }
-
-  if (file.size > 2 * 1024 * 1024) {
-    $("err").textContent = "Fail melebihi had 2 MB.";
-    $("err").style.display = "block";
-    return;
-  }
-
-  if (![
-    "image/jpeg", "image/png", "image/webp", "application/pdf"
-  ].includes(file.type)) {
-    $("err").textContent = "Format fail tidak disokong.";
-    $("err").style.display = "block";
-    return;
+  if (!file) return showError("err", "Sila lampirkan bukti pembayaran.");
+  if (file.size > 2 * 1024 * 1024) return showError("err", "Fail melebihi had 2 MB.");
+  if (!["image/jpeg","image/png","image/webp","application/pdf"].includes(file.type)) {
+    return showError("err", "Format fail tidak disokong.");
   }
 
   const amount = Number($("amount").value);
-
   if (!Number.isFinite(amount) || amount <= 0) {
-    $("err").textContent = "Jumlah sumbangan tidak sah.";
-    $("err").style.display = "block";
-    return;
+    return showError("err", "Jumlah sumbangan tidak sah.");
   }
 
   const button = $("submit");
@@ -325,9 +253,7 @@ $("form").addEventListener("submit", async e => {
   $("loading").style.display = "block";
 
   try {
-    ready();
-
-    const data = await new Promise((resolve, reject) => {
+    const proofData = await new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = () => resolve(reader.result);
       reader.onerror = () => reject(Error("Gagal membaca fail."));
@@ -343,38 +269,30 @@ $("form").addEventListener("submit", async e => {
       note: $("note").value.trim(),
       proofName: file.name,
       proofMime: file.type,
-      proofData: data
+      proofData
     };
 
     /*
-      PENTING:
-      no-cors tidak membolehkan browser membaca keputusan server.
-      Sahkan rekod sebenar dalam Google Sheet selepas ujian.
+      Amaran: no-cors tidak membolehkan browser membaca keputusan server.
+      Semak Google Sheet dan Google Drive selepas ujian.
     */
     await fetch(API_URL, {
       method: "POST",
       mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      },
+      headers: {"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
       body: new URLSearchParams(payload)
     });
 
     $("formCard").style.display = "none";
     $("thanks").style.display = "block";
-
     $("thanksText").textContent =
       "Terima kasih " + payload.name +
-      ". Rekod telah dihantar untuk semakan. " +
-      "Penghantaran ini bukan pengesahan penerimaan wang.";
-
+      ". Sila semak rekod dalam Google Sheet untuk mengesahkan penghantaran berjaya.";
     $("form").reset();
     summary();
     recent();
-
   } catch (e) {
-    $("err").textContent = e.message;
-    $("err").style.display = "block";
+    showError("err", e.message);
   } finally {
     button.disabled = false;
     $("loading").style.display = "none";
@@ -384,7 +302,7 @@ $("form").addEventListener("submit", async e => {
 $("another").addEventListener("click", () => {
   $("thanks").style.display = "none";
   $("formCard").style.display = "block";
-  $("formCard").scrollIntoView({ behavior: "smooth" });
+  $("formCard").scrollIntoView({behavior:"smooth"});
 });
 
 $("refresh").addEventListener("click", () => {
@@ -397,57 +315,65 @@ $("toggle").addEventListener("click", () => {
     $("admin").style.display === "block" ? "none" : "block";
 });
 
+/* Admin: paparkan butang untuk status yang masih menunggu semakan */
 $("login").addEventListener("click", async () => {
   $("adminErr").style.display = "none";
 
   try {
-    const d = await get("adminList", { pin: $("pin").value });
-
+    const d = await get("adminList", {pin:$("pin").value});
     if (!d.success) throw Error(d.message || "Akses admin ditolak.");
 
-    $("adminList").innerHTML = (d.items || []).map(x => `
-      <div class="recent">
-        <b>${esc(x.name)} — RM ${rm(x.amount)}</b>
-        <p>
-          Status: ${esc(x.status)}<br>
-          <a href="${esc(x.proofUrl)}" target="_blank" rel="noopener">
-            Lihat bukti pembayaran
-          </a>
-        </p>
-        ${String(x.status).toUpperCase() === "PENDING" ? `
-          <button data-id="${esc(x.id)}" data-status="APPROVED">
-            APPROVE
-          </button>
-          <button data-id="${esc(x.id)}" data-status="REJECTED"
-            style="background:#b33">REJECT</button>
-        ` : ""}
-      </div>
-    `).join("") || "Tiada rekod.";
+    $("adminList").innerHTML = (d.items || []).map(x => {
+      const status = String(x.status || "").trim().toUpperCase();
+      const pending = [
+        "PENDING",
+        "DALAM SEMAKAN",
+        "MENUNGGU SEMAKAN",
+        "PENDING APPROVAL"
+      ].includes(status);
+
+      return `
+        <div class="recent">
+          <b>${esc(x.name)} — RM ${rm(x.amount)}</b>
+          <p>
+            Status: <b>${esc(x.status || "Tidak diketahui")}</b><br>
+            ${x.proofUrl
+              ? `<a href="${esc(x.proofUrl)}" target="_blank" rel="noopener">Lihat bukti pembayaran</a>`
+              : `<span class="hint">Tiada pautan bukti dalam rekod ini.</span>`}
+          </p>
+          ${pending ? `
+            <div style="display:flex;gap:8px">
+              <button data-id="${esc(x.id)}" data-status="APPROVED" style="background:#13834a">SAHKAN</button>
+              <button data-id="${esc(x.id)}" data-status="REJECTED" style="background:#b3261e">TOLAK</button>
+            </div>
+          ` : ""}
+        </div>
+      `;
+    }).join("") || "Tiada rekod.";
 
     $("adminList").querySelectorAll("button[data-id]").forEach(btn => {
       btn.addEventListener("click", () =>
         statusChange(btn.dataset.id, btn.dataset.status)
       );
     });
-
   } catch (e) {
-    $("adminErr").textContent = e.message;
-    $("adminErr").style.display = "block";
+    showError("adminErr", e.message);
   }
 });
 
+/*
+  Apps Script mesti mempunyai action=status dan pengesahan PIN di server.
+  no-cors tidak membolehkan browser mengesahkan status akhir.
+*/
 async function statusChange(id, status) {
-  if (!confirm("Tukar status kepada " + status + "?")) return;
+  const label = status === "APPROVED" ? "SAHKAN" : "TOLAK";
+  if (!confirm("Anda pasti mahu " + label + " rekod ini?")) return;
 
   try {
-    ready();
-
     await fetch(API_URL, {
       method: "POST",
       mode: "no-cors",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
-      },
+      headers: {"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
       body: new URLSearchParams({
         action: "status",
         pin: $("pin").value,
@@ -456,44 +382,35 @@ async function statusChange(id, status) {
       })
     });
 
+    alert("Arahan dihantar. Sila semak status sebenar dalam Google Sheet.");
     setTimeout(() => {
       $("login").click();
       summary();
       recent();
-    }, 1500);
-
+    }, 1800);
   } catch (e) {
-    alert(e.message);
+    alert("Gagal menghantar arahan: " + e.message);
   }
 }
 
-/* Salin nombor akaun penerima */
 $("copyAccount").addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText("105730012470");
     $("copyAccount").textContent = "Nombor Akaun Disalin";
-    setTimeout(() => {
-      $("copyAccount").textContent = "Salin Nombor Akaun";
-    }, 1800);
+    setTimeout(() => $("copyAccount").textContent = "Salin Nombor Akaun", 1800);
   } catch (e) {
     alert("AFFIN BANK: 105730012470");
   }
 });
 
-/* Pilihan online banking */
 $("bankChooserButton").addEventListener("click", () => {
-  const box = $("bankChooser");
-  box.style.display = box.style.display === "block" ? "none" : "block";
+  $("bankChooser").style.display =
+    $("bankChooser").style.display === "block" ? "none" : "block";
 });
 
 $("openSelectedBank").addEventListener("click", () => {
   const url = $("bankSelect").value;
-
-  if (!url) {
-    alert("Sila pilih bank dahulu.");
-    return;
-  }
-
+  if (!url) return alert("Sila pilih bank dahulu.");
   window.open(url, "_blank", "noopener,noreferrer");
 });
 
