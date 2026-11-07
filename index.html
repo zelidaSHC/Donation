@@ -5,52 +5,209 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0878d1">
 <title>Dana Sumbangan STAND HC</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f1f5fa;color:#172033;font-family:Arial,sans-serif}
-header{background:linear-gradient(135deg,#075bb5,#0789df);color:white;text-align:center;padding:25px 12px;border-radius:0 0 20px 20px}
-main{max-width:650px;margin:auto;padding:14px}
-.card{background:white;border-radius:16px;padding:17px;margin-bottom:14px;box-shadow:0 3px 14px #0001}
-h1{font-size:24px}h2{font-size:19px;margin:0 0 14px}
-.stats{display:flex;gap:10px}
-.stat{flex:1;text-align:center;background:#eff7ff;border-radius:10px;padding:12px}
-.stat b{display:block;color:#075fae;font-size:22px;margin-top:6px}
-.qr{display:block;width:100%;max-width:350px;margin:auto}
+
+body{
+  margin:0;
+  background:#f1f5fa;
+  color:#172033;
+  font-family:Arial,sans-serif
+}
+
+header{
+  background:linear-gradient(135deg,#075bb5,#0789df);
+  color:white;
+  text-align:center;
+  padding:25px 12px;
+  border-radius:0 0 20px 20px
+}
+
+.club-logo{
+  display:block;
+  width:min(180px,55vw);
+  max-height:120px;
+  object-fit:contain;
+  margin:0 auto 12px
+}
+
+main{
+  max-width:650px;
+  margin:auto;
+  padding:14px
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:17px;
+  margin-bottom:14px;
+  box-shadow:0 3px 14px #0001
+}
+
+h1{font-size:24px}
+h2{font-size:19px;margin:0 0 14px}
+
+.stats{
+  display:flex;
+  gap:10px
+}
+
+.stat{
+  flex:1;
+  text-align:center;
+  background:#eff7ff;
+  border-radius:10px;
+  padding:12px
+}
+
+.stat b{
+  display:block;
+  color:#075fae;
+  font-size:22px;
+  margin-top:6px
+}
+
+.qr{
+  display:block;
+  width:100%;
+  max-width:350px;
+  margin:auto
+}
+
 .center{text-align:center}
-.note{background:#fff6dc;padding:12px;border-radius:10px;font-size:13px;line-height:1.6;margin-top:12px}
-.actions{display:flex;gap:9px;flex-wrap:wrap}
-.linkbtn{flex:1;min-width:130px;text-decoration:none;text-align:center;background:#eaf5ff;color:#075fae;border-radius:10px;padding:12px;font-weight:bold;font-size:14px;display:block}
-label{display:block;font-weight:bold;font-size:14px;margin:14px 0 6px}
-input,textarea,select{width:100%;padding:12px;border:1px solid #d5dce6;border-radius:9px;font-size:16px;background:white}
+
+.note{
+  background:#fff6dc;
+  padding:12px;
+  border-radius:10px;
+  font-size:13px;
+  line-height:1.6;
+  margin-top:12px
+}
+
+.actions{
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap
+}
+
+.linkbtn{
+  flex:1;
+  min-width:130px;
+  text-decoration:none;
+  text-align:center;
+  background:#eaf5ff;
+  color:#075fae;
+  border-radius:10px;
+  padding:12px;
+  font-weight:bold;
+  font-size:14px;
+  display:block
+}
+
+label{
+  display:block;
+  font-weight:bold;
+  font-size:14px;
+  margin:14px 0 6px
+}
+
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  border:1px solid #d5dce6;
+  border-radius:9px;
+  font-size:16px;
+  background:white
+}
+
 textarea{min-height:70px}
-button{width:100%;padding:13px;background:#0867bd;color:white;border:0;border-radius:9px;font-weight:bold;margin-top:14px;cursor:pointer}
+
+button{
+  width:100%;
+  padding:13px;
+  background:#0867bd;
+  color:white;
+  border:0;
+  border-radius:9px;
+  font-weight:bold;
+  margin-top:14px;
+  cursor:pointer
+}
+
 button:disabled{opacity:.6}
-.hint{font-size:12px;color:#687386;line-height:1.5}
-.error{color:#a00;background:#fff0f0;padding:10px;border-radius:8px;display:none}
-.recent{padding:10px 0;border-bottom:1px solid #eee;overflow-wrap:anywhere}
+
+.hint{
+  font-size:12px;
+  color:#687386;
+  line-height:1.5
+}
+
+.error{
+  color:#a00;
+  background:#fff0f0;
+  padding:10px;
+  border-radius:8px;
+  display:none
+}
+
+.recent{
+  padding:10px 0;
+  border-bottom:1px solid #eee;
+  overflow-wrap:anywhere
+}
+
 .admin{display:none}
-footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
+
+footer{
+  text-align:center;
+  color:#899;
+  font-size:11px;
+  padding:10px 15px 25px
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <div style="font-size:20px;font-weight:bold">STAND HC</div>
+  <!-- LOGO RASMI STAND HANDball CLUB -->
+  <img
+    src="stand-hc-logo.png"
+    class="club-logo"
+    alt="Logo Rasmi STAND Handball Club"
+  >
+
   <h1>DANA SUMBANGAN STAND HC</h1>
   <div>Sumbangan melalui QR atau online banking</div>
 </header>
 
 <main>
+
 <section class="card">
   <div class="stats">
-    <div class="stat">Dana disahkan<b id="total">RM 0.00</b></div>
-    <div class="stat">Penyumbang<b id="donors">0</b></div>
+    <div class="stat">
+      Dana disahkan
+      <b id="total">RM 0.00</b>
+    </div>
+
+    <div class="stat">
+      Penyumbang
+      <b id="donors">0</b>
+    </div>
   </div>
+
   <p class="hint center" id="status">Memuatkan data...</p>
 </section>
 
+
 <section class="card">
   <h2>Bayar melalui QR atau Online Banking</h2>
+
   <img class="qr" src="qr-code.jpg" alt="QR Affin">
+
   <p class="center">
     <b>NORAZAWATI BINTI MD ARIF</b><br>
     <span class="hint">AFFIN BANK</span><br>
@@ -63,15 +220,23 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
     2. Masukkan nombor akaun 105730012470 dan pastikan nama penerima betul.<br>
     3. Lengkapkan pembayaran melalui aplikasi bank anda.<br>
     4. Simpan resit dan lampirkan bukti pembayaran di bawah.<br><br>
+
     Rekod sumbangan hanya akan diluluskan selepas admin menyemak transaksi sebenar.
   </div>
 
   <div class="actions" style="margin-top:14px">
-    <button type="button" class="linkbtn" id="bankChooserButton" style="border:0;margin:0">Pilih Online Banking</button>
+    <button
+      type="button"
+      class="linkbtn"
+      id="bankChooserButton"
+      style="border:0;margin:0">
+      Pilih Online Banking
+    </button>
   </div>
 
   <div id="bankChooser" style="display:none;margin-top:12px">
     <label for="bankSelect">Pilih bank anda</label>
+
     <select id="bankSelect">
       <option value="">-- Pilih bank --</option>
       <option value="https://www.maybank2u.com.my/">Maybank</option>
@@ -93,16 +258,30 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
       <option value="https://www.alliancebank.com.my/">Alliance Bank</option>
       <option value="https://www.mbsbbank.com/">MBSB Bank</option>
     </select>
-    <button type="button" id="openSelectedBank">Buka laman bank</button>
-    <p class="hint">Pautan ini membuka laman bank sahaja. Jangan masukkan kata laluan, PIN atau OTP bank dalam aplikasi STAND HC.</p>
+
+    <button type="button" id="openSelectedBank">
+      Buka laman bank
+    </button>
+
+    <p class="hint">
+      Pautan ini membuka laman bank sahaja. Jangan masukkan kata laluan, PIN atau OTP bank dalam aplikasi STAND HC.
+    </p>
   </div>
 
-  <button type="button" id="copyAccount" style="background:#eaf5ff;color:#075fae">Salin Nombor Akaun</button>
+  <button
+    type="button"
+    id="copyAccount"
+    style="background:#eaf5ff;color:#075fae">
+    Salin Nombor Akaun
+  </button>
 </section>
+
 
 <section class="card" id="formCard">
   <h2>Hantar Rekod Sumbangan</h2>
+
   <form id="form">
+
     <label for="name">Nama penyumbang *</label>
     <input id="name" maxlength="100" required>
 
@@ -110,69 +289,144 @@ footer{text-align:center;color:#899;font-size:11px;padding:10px 15px 25px}
     <input id="phone" type="tel" maxlength="30">
 
     <label for="amount">Jumlah sumbangan (RM) *</label>
-    <input id="amount" type="number" min="0.01" max="1000000" step="0.01" required>
+    <input
+      id="amount"
+      type="number"
+      min="0.01"
+      max="1000000"
+      step="0.01"
+      required
+    >
 
     <label for="reference">Rujukan transaksi</label>
     <input id="reference" maxlength="100">
 
-    <label for="proof">Bukti pembayaran (JPG/PNG/WEBP/PDF, maks 2 MB) *</label>
-    <input id="proof" type="file" accept="image/jpeg,image/png,image/webp,application/pdf" required>
-    <p class="hint">Lampirkan resit atau screenshot transaksi. Jangan lampirkan kata laluan, PIN atau OTP.</p>
+    <label for="proof">
+      Bukti pembayaran (JPG/PNG/WEBP/PDF, maks 2 MB) *
+    </label>
+
+    <input
+      id="proof"
+      type="file"
+      accept="image/jpeg,image/png,image/webp,application/pdf"
+      required
+    >
+
+    <p class="hint">
+      Lampirkan resit atau screenshot transaksi. Jangan lampirkan kata laluan, PIN atau OTP.
+    </p>
 
     <label for="note">Catatan</label>
-    <textarea id="note" maxlength="300" placeholder="Contoh: Sumbangan untuk kejohanan STAND HC"></textarea>
-    <button id="submit" type="submit">HANTAR SUMBANGAN</button>
+    <textarea
+      id="note"
+      maxlength="300"
+      placeholder="Contoh: Sumbangan untuk kejohanan STAND HC">
+    </textarea>
+
+    <button id="submit" type="submit">
+      HANTAR SUMBANGAN
+    </button>
+
   </form>
-  <p class="hint" id="loading" style="display:none">Menghantar rekod dan bukti pembayaran...</p>
+
+  <p class="hint" id="loading" style="display:none">
+    Menghantar rekod dan bukti pembayaran...
+  </p>
+
   <p class="error" id="err"></p>
 </section>
 
-<section class="card" id="thanks" style="display:none;text-align:center">
+
+<section
+  class="card"
+  id="thanks"
+  style="display:none;text-align:center">
+
   <h2>🙏 Terima kasih!</h2>
+
   <p id="thanksText"></p>
-  <p class="hint">Rekod perlu disemak admin. Penghantaran borang bukan pengesahan wang telah diterima.</p>
+
+  <p class="hint">
+    Rekod perlu disemak admin. Penghantaran borang bukan pengesahan wang telah diterima.
+  </p>
+
   <button id="another">Hantar sumbangan lain</button>
 </section>
 
-<!-- Senarai nama penyumbang disembunyikan -->
+
+<!-- SENARAI NAMA PENYUMBANG DISEMBUNYIKAN -->
 <section class="card" style="display:none">
   <h2>Sumbangan terkini yang disahkan</h2>
   <button id="refresh">Refresh</button>
   <div id="recent" class="hint">Memuatkan...</div>
 </section>
 
+
 <section class="card">
   <h2>Admin</h2>
+
   <button id="toggle">Buka Admin</button>
+
   <div class="admin" id="admin">
+
     <label for="pin">PIN admin</label>
-    <input id="pin" type="password" autocomplete="current-password">
-    <button id="login">Log masuk / Muat rekod</button>
+    <input
+      id="pin"
+      type="password"
+      autocomplete="current-password"
+    >
+
+    <button id="login">
+      Log masuk / Muat rekod
+    </button>
+
     <p class="error" id="adminErr"></p>
+
     <div id="adminList"></div>
   </div>
 </section>
+
 </main>
 
-<footer>STAND HC · Sumbangan tertakluk kepada pengesahan transaksi sebenar.</footer>
+<footer>
+  STAND HC · Sumbangan tertakluk kepada pengesahan transaksi sebenar.
+</footer>
+
 
 <script>
-/* URL Web App Apps Script semasa */
-const API_URL = "https://script.google.com/macros/s/AKfycbyU3DLxyek4XyHzx3EMZM6KQbVgdR2QElggxUiRDBHhu4N_4nP89DopVyeE6bUeI93h/exec";
+
+/* URL WEB APP APPS SCRIPT SEMASA */
+const API_URL =
+"https://script.google.com/macros/s/AKfycbyU3DLxyek4XyHzx3EMZM6KQbVgdR2QElggxUiRDBHhu4N_4nP89DopVyeE6bUeI93h/exec";
+
 
 const $ = id => document.getElementById(id);
+
+
 const rm = n => Number(n || 0).toLocaleString("ms-MY", {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2
 });
+
+
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
-  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
 }[c]));
 
+
 function get(action, extra = {}) {
+
   return new Promise((resolve, reject) => {
-    const cb = "cb" + Date.now() + Math.random().toString(36).slice(2);
+
+    const cb = "cb" + Date.now() +
+      Math.random().toString(36).slice(2);
+
     const script = document.createElement("script");
+
     const timer = setTimeout(() => {
       cleanup();
       reject(Error("Permintaan tamat masa. Semak Apps Script."));
@@ -188,143 +442,266 @@ function get(action, extra = {}) {
       cleanup();
       resolve(data);
     };
+
     script.onerror = () => {
       cleanup();
       reject(Error("Gagal menghubungi Apps Script."));
     };
+
     script.src = API_URL + "?" +
-      new URLSearchParams({ action, callback: cb, ...extra });
+      new URLSearchParams({
+        action,
+        callback: cb,
+        ...extra
+      });
+
     document.body.appendChild(script);
   });
 }
+
 
 function showError(id, message) {
   $(id).textContent = message;
   $(id).style.display = "block";
 }
 
+
 async function summary() {
+
   try {
+
     const d = await get("summary");
-    if (!d.success) throw Error(d.message || "Gagal membaca data.");
+
+    if (!d.success) {
+      throw Error(d.message || "Gagal membaca data.");
+    }
+
     $("total").textContent = "RM " + rm(d.total);
     $("donors").textContent = d.donors || 0;
     $("status").textContent = "Data dikemaskini";
+
   } catch (e) {
+
     $("status").textContent = e.message;
+
   }
 }
 
+
 async function recent() {
+
   try {
+
     const d = await get("recent");
-    if (!d.success) throw Error(d.message || "Gagal membaca rekod.");
+
+    if (!d.success) {
+      throw Error(d.message || "Gagal membaca rekod.");
+    }
+
     $("recent").innerHTML = d.items?.length
       ? d.items.map(x => `
           <div class="recent">
-            <b>${esc(x.name)} <span style="float:right">RM ${rm(x.amount)}</span></b><br>
+            <b>
+              ${esc(x.name)}
+              <span style="float:right">RM ${rm(x.amount)}</span>
+            </b><br>
             <small>${esc(x.date || "")} · Disahkan</small>
           </div>
         `).join("")
       : "Belum ada sumbangan disahkan.";
+
   } catch (e) {
+
     $("recent").textContent = e.message;
+
   }
 }
 
+
+/* HANTAR SUMBANGAN */
 $("form").addEventListener("submit", async e => {
+
   e.preventDefault();
+
   $("err").style.display = "none";
 
   const file = $("proof").files[0];
-  if (!file) return showError("err", "Sila lampirkan bukti pembayaran.");
-  if (file.size > 2 * 1024 * 1024) return showError("err", "Fail melebihi had 2 MB.");
-  if (!["image/jpeg","image/png","image/webp","application/pdf"].includes(file.type)) {
+
+  if (!file) {
+    return showError("err", "Sila lampirkan bukti pembayaran.");
+  }
+
+  if (file.size > 2 * 1024 * 1024) {
+    return showError("err", "Fail melebihi had 2 MB.");
+  }
+
+  if (![
+    "image/jpeg",
+    "image/png",
+    "image/webp",
+    "application/pdf"
+  ].includes(file.type)) {
+
     return showError("err", "Format fail tidak disokong.");
+
   }
 
   const amount = Number($("amount").value);
+
   if (!Number.isFinite(amount) || amount <= 0) {
     return showError("err", "Jumlah sumbangan tidak sah.");
   }
 
   const button = $("submit");
+
   button.disabled = true;
   $("loading").style.display = "block";
 
   try {
+
     const proofData = await new Promise((resolve, reject) => {
+
       const reader = new FileReader();
+
       reader.onload = () => resolve(reader.result);
-      reader.onerror = () => reject(Error("Gagal membaca fail."));
+
+      reader.onerror = () =>
+        reject(Error("Gagal membaca fail."));
+
       reader.readAsDataURL(file);
+
     });
+
 
     const payload = {
+
       action: "submit",
+
       name: $("name").value.trim(),
+
       phone: $("phone").value.trim(),
+
       amount: amount.toFixed(2),
+
       reference: $("reference").value.trim(),
+
       note: $("note").value.trim(),
+
       proofName: file.name,
+
       proofMime: file.type,
+
       proofData
+
     };
 
+
     /*
-      Amaran: no-cors tidak membolehkan browser membaca keputusan server.
+      no-cors tidak membolehkan browser membaca
+      keputusan sebenar daripada server.
       Semak Google Sheet dan Google Drive selepas ujian.
     */
+
     await fetch(API_URL, {
+
       method: "POST",
+
       mode: "no-cors",
-      headers: {"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
+
+      headers: {
+        "Content-Type":
+        "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+
       body: new URLSearchParams(payload)
+
     });
 
+
     $("formCard").style.display = "none";
+
     $("thanks").style.display = "block";
+
     $("thanksText").textContent =
       "Terima kasih " + payload.name +
       ". Sila semak rekod dalam Google Sheet untuk mengesahkan penghantaran berjaya.";
+
     $("form").reset();
+
     summary();
     recent();
+
   } catch (e) {
+
     showError("err", e.message);
+
   } finally {
+
     button.disabled = false;
+
     $("loading").style.display = "none";
+
   }
+
 });
 
+
+/* HANTAR SUMBANGAN LAIN */
 $("another").addEventListener("click", () => {
+
   $("thanks").style.display = "none";
+
   $("formCard").style.display = "block";
-  $("formCard").scrollIntoView({behavior:"smooth"});
+
+  $("formCard").scrollIntoView({
+    behavior:"smooth"
+  });
+
 });
 
+
+/* REFRESH */
 $("refresh").addEventListener("click", () => {
+
   summary();
   recent();
+
 });
 
+
+/* BUKA / TUTUP ADMIN */
 $("toggle").addEventListener("click", () => {
+
   $("admin").style.display =
-    $("admin").style.display === "block" ? "none" : "block";
+    $("admin").style.display === "block"
+      ? "none"
+      : "block";
+
 });
 
-/* Admin: paparkan butang untuk status yang masih menunggu semakan */
+
+/* LOG MASUK ADMIN */
 $("login").addEventListener("click", async () => {
+
   $("adminErr").style.display = "none";
 
   try {
-    const d = await get("adminList", {pin:$("pin").value});
-    if (!d.success) throw Error(d.message || "Akses admin ditolak.");
+
+    const d = await get("adminList", {
+      pin:$("pin").value
+    });
+
+    if (!d.success) {
+      throw Error(d.message || "Akses admin ditolak.");
+    }
+
 
     $("adminList").innerHTML = (d.items || []).map(x => {
-      const status = String(x.status || "").trim().toUpperCase();
+
+      const status = String(x.status || "")
+        .trim()
+        .toUpperCase();
+
       const pending = [
         "PENDING",
         "DALAM SEMAKAN",
@@ -332,90 +709,188 @@ $("login").addEventListener("click", async () => {
         "PENDING APPROVAL"
       ].includes(status);
 
+
       return `
         <div class="recent">
-          <b>${esc(x.name)} — RM ${rm(x.amount)}</b>
+
+          <b>
+            ${esc(x.name)} — RM ${rm(x.amount)}
+          </b>
+
           <p>
-            Status: <b>${esc(x.status || "Tidak diketahui")}</b><br>
-            ${x.proofUrl
+            Status:
+            <b>${esc(x.status || "Tidak diketahui")}</b>
+            <br>
+
+            ${
+              x.proofUrl
               ? `<a href="${esc(x.proofUrl)}" target="_blank" rel="noopener">Lihat bukti pembayaran</a>`
-              : `<span class="hint">Tiada pautan bukti dalam rekod ini.</span>`}
+              : `<span class="hint">Tiada pautan bukti dalam rekod ini.</span>`
+            }
+
           </p>
+
           ${pending ? `
+
             <div style="display:flex;gap:8px">
-              <button data-id="${esc(x.id)}" data-status="APPROVED" style="background:#13834a">SAHKAN</button>
-              <button data-id="${esc(x.id)}" data-status="REJECTED" style="background:#b3261e">TOLAK</button>
+
+              <button
+                data-id="${esc(x.id)}"
+                data-status="APPROVED"
+                style="background:#13834a">
+                SAHKAN
+              </button>
+
+              <button
+                data-id="${esc(x.id)}"
+                data-status="REJECTED"
+                style="background:#b3261e">
+                TOLAK
+              </button>
+
             </div>
+
           ` : ""}
+
         </div>
       `;
+
     }).join("") || "Tiada rekod.";
 
-    $("adminList").querySelectorAll("button[data-id]").forEach(btn => {
-      btn.addEventListener("click", () =>
-        statusChange(btn.dataset.id, btn.dataset.status)
-      );
-    });
+
+    $("adminList")
+      .querySelectorAll("button[data-id]")
+      .forEach(btn => {
+
+        btn.addEventListener("click", () =>
+          statusChange(
+            btn.dataset.id,
+            btn.dataset.status
+          )
+        );
+
+      });
+
+
   } catch (e) {
+
     showError("adminErr", e.message);
+
   }
+
 });
 
-/*
-  Apps Script mesti mempunyai action=status dan pengesahan PIN di server.
-  no-cors tidak membolehkan browser mengesahkan status akhir.
-*/
+
+/* TUKAR STATUS SUMBANGAN */
 async function statusChange(id, status) {
-  const label = status === "APPROVED" ? "SAHKAN" : "TOLAK";
-  if (!confirm("Anda pasti mahu " + label + " rekod ini?")) return;
+
+  const label =
+    status === "APPROVED" ? "SAHKAN" : "TOLAK";
+
+  if (!confirm("Anda pasti mahu " + label + " rekod ini?")) {
+    return;
+  }
 
   try {
+
     await fetch(API_URL, {
+
       method: "POST",
+
       mode: "no-cors",
-      headers: {"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"},
+
+      headers: {
+        "Content-Type":
+        "application/x-www-form-urlencoded;charset=UTF-8"
+      },
+
       body: new URLSearchParams({
         action: "status",
         pin: $("pin").value,
         id,
         status
       })
+
     });
 
-    alert("Arahan dihantar. Sila semak status sebenar dalam Google Sheet.");
+    alert(
+      "Arahan dihantar. Sila semak status sebenar dalam Google Sheet."
+    );
+
     setTimeout(() => {
+
       $("login").click();
+
       summary();
       recent();
+
     }, 1800);
+
   } catch (e) {
+
     alert("Gagal menghantar arahan: " + e.message);
+
   }
+
 }
 
+
+/* SALIN NOMBOR AKAUN */
 $("copyAccount").addEventListener("click", async () => {
+
   try {
+
     await navigator.clipboard.writeText("105730012470");
-    $("copyAccount").textContent = "Nombor Akaun Disalin";
-    setTimeout(() => $("copyAccount").textContent = "Salin Nombor Akaun", 1800);
+
+    $("copyAccount").textContent =
+      "Nombor Akaun Disalin";
+
+    setTimeout(() => {
+
+      $("copyAccount").textContent =
+        "Salin Nombor Akaun";
+
+    }, 1800);
+
   } catch (e) {
+
     alert("AFFIN BANK: 105730012470");
+
   }
+
 });
 
+
+/* PILIH ONLINE BANKING */
 $("bankChooserButton").addEventListener("click", () => {
+
   $("bankChooser").style.display =
-    $("bankChooser").style.display === "block" ? "none" : "block";
+    $("bankChooser").style.display === "block"
+      ? "none"
+      : "block";
+
 });
 
+
+/* BUKA LAMAN BANK */
 $("openSelectedBank").addEventListener("click", () => {
+
   const url = $("bankSelect").value;
-  if (!url) return alert("Sila pilih bank dahulu.");
+
+  if (!url) {
+    return alert("Sila pilih bank dahulu.");
+  }
+
   window.open(url, "_blank", "noopener,noreferrer");
+
 });
 
+
+/* MUAT DATA */
 summary();
 recent();
+
 </script>
+
 </body>
 </html>
